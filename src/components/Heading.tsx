@@ -7,6 +7,7 @@ interface Props {
     as: HeadingType;
     weight?: number;
     children: React.ReactNode | React.ReactNode[];
+    lineHeight?: number;
 }
 
 const H1 = styled('h1', {
@@ -39,14 +40,14 @@ const H6 = styled('h6', {
     fontSize: '1rem'
 });
 
-const Heading: React.FC<Props> = ({ as, children, weight = 500 }) => {
+const Heading: React.FC<Props> = ({ as, children, weight = 500, lineHeight = 1.3 }) => {
     switch(as) {
-        case 'h1': return <H1 css={{fontWeight: weight}}>{children}</H1>;
-        case 'h2': return <H2 css={{fontWeight: weight}}>{children}</H2>;
-        case 'h3': return <H3 css={{fontWeight: weight}}>{children}</H3>;
-        case 'h4': return <H4 css={{fontWeight: weight}}>{children}</H4>;
-        case 'h5': return <H5 css={{fontWeight: weight}}>{children}</H5>;
-        case 'h6': return <H6 css={{fontWeight: weight}}>{children}</H6>;
+        case 'h1': return <H1 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H1>;
+        case 'h2': return <H2 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H2>;
+        case 'h3': return <H3 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H3>;
+        case 'h4': return <H4 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H4>;
+        case 'h5': return <H5 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H5>;
+        case 'h6': return <H6 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H6>;
     }
 };
 

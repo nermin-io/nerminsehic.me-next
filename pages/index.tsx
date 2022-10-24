@@ -3,6 +3,7 @@ import DocumentHead from '../src/components/layout/DocumentHead';
 import Layout from '../src/components/layout/Layout';
 import HeroHeader from '../src/components/HeroHeader';
 import About from '../src/components/slices/About';
+import RecentArticles from '../src/components/RecentArticles';
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       <Layout>
         <HeroHeader />
         <About />
+        <RecentArticles />
       </Layout>
     </div>
   )

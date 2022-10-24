@@ -5,6 +5,9 @@ const TextHighlight = styled('span', {
         variant: {
             green: {
                 color: '#DFF962'
+            },
+            subtle: {
+                color: '#6A6A6A'
             }
         }
     },
