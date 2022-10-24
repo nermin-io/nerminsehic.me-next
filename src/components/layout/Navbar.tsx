@@ -35,7 +35,7 @@ const NavList = styled("ul", {
   listStyle: "none",
   display: "flex",
   alignItems: "center",
-  gap: 40,
+  gap: 20,
 });
 
 const NavItem = styled("li", {
@@ -52,20 +52,12 @@ const IconGroup = styled(Box, {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Nermin Sehic",
+    label: "Home",
     link: "",
   },
   {
-    label: "About",
-    link: "#about",
-  },
-  {
-    label: "Contact",
-    link: "#contact",
-  },
-  {
     label: "TIL",
-    link: "#til",
+    link: "/posts",
   },
 ];
 
