@@ -47,23 +47,23 @@ const NavItem = styled("li", {
   alignItems: "center",
   justifyContent: "center",
   width: NAV_WIDTH,
-  '& a': {
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%'
-  }
+  "& a": {
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+  },
 });
 
 const SlidingLine = styled("hr", {
-    all: 'unset',
-  height: 1,
+  all: "unset",
+  height: 2,
   backgroundColor: "white",
   width: NAV_WIDTH,
   margin: 0,
   position: "absolute",
-  transition: 'left .2s ease-out',
+  transition: "left .2s ease-out",
 });
 
 const NavListContainer = styled(Box, {
@@ -103,12 +103,17 @@ const SOCIAL_ITEMS: Array<SocialItem> = [
 ];
 
 const isSelected = (item: NavItem, routePath: string) => {
-    return routePath === item.link || (item.link !== "/" && routePath.startsWith(item.link));
-}
+  return (
+    routePath === item.link ||
+    (item.link !== "/" && routePath.startsWith(item.link))
+  );
+};
 
 const Navbar: React.FC<Props> = () => {
   const { asPath: routePath } = useRouter();
-  const selectedPageIdx = NAV_ITEMS.findIndex(item => isSelected(item, routePath));
+  const selectedPageIdx = NAV_ITEMS.findIndex((item) =>
+    isSelected(item, routePath)
+  );
   const [navIndex, setNavIndex] = useState(selectedPageIdx);
 
   return (
@@ -116,8 +121,14 @@ const Navbar: React.FC<Props> = () => {
       <NavListContainer>
         <NavList>
           {NAV_ITEMS.map((item, itemIdx) => {
+            const itemIsSelected = isSelected(item, routePath);
             return (
-              <NavItem key={`${item.label}-${itemIdx}`} onMouseOver={e => setNavIndex(itemIdx)} onMouseLeave={e => setNavIndex(selectedPageIdx)}>
+              <NavItem
+                key={`${item.label}-${itemIdx}`}
+                css={{fontWeight: itemIsSelected ? 500 : 400}}
+                onMouseOver={(e) => setNavIndex(itemIdx)}
+                onMouseLeave={(e) => setNavIndex(selectedPageIdx)}
+              >
                 <Link href={item.link}>
                   <a>{item.label}</a>
                 </Link>
@@ -125,7 +136,9 @@ const Navbar: React.FC<Props> = () => {
             );
           })}
         </NavList>
-        <SlidingLine css={{left: (navIndex * NAV_WIDTH) + (navIndex * NAV_GAP)}}/>
+        <SlidingLine
+          css={{ left: navIndex * NAV_WIDTH + navIndex * NAV_GAP }}
+        />
       </NavListContainer>
       <IconGroup>
         {SOCIAL_ITEMS.map((item, itemIdx) => {
