@@ -146,7 +146,7 @@ const Navbar: React.FC<Props> = () => {
           return (
             <Link key={`${item.link}-${itemIdx}`} href={item.link}>
               <a>
-                <Icon height={24} width={24} fill="#787878" />
+                <Icon height={24} width={24} fill="#787878" onHoverFill="#979797" />
               </a>
             </Link>
           );
