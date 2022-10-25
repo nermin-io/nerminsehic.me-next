@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "../Box";
 import Link from "next/link";
 import { styled } from "@stitches/react";
@@ -20,6 +20,9 @@ type SocialItem = {
   link: string;
 };
 
+const NAV_WIDTH = 60;
+const NAV_GAP = 20;
+
 const Nav = styled("nav", {
   all: "unset",
   borderBottom: "1px solid #242424",
@@ -35,25 +38,48 @@ const NavList = styled("ul", {
   listStyle: "none",
   display: "flex",
   alignItems: "center",
-  gap: 20,
+  gap: NAV_GAP,
 });
 
 const NavItem = styled("li", {
   height: "100%",
-  padding: "0 10px",
   display: "flex",
   alignItems: "center",
+  justifyContent: "center",
+  width: NAV_WIDTH,
+  '& a': {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%'
+  }
+});
+
+const SlidingLine = styled("hr", {
+    all: 'unset',
+  height: 1,
+  backgroundColor: "white",
+  width: NAV_WIDTH,
+  margin: 0,
+  position: "absolute",
+  transition: 'left .2s ease-out',
+});
+
+const NavListContainer = styled(Box, {
+  height: "100%",
+  position: "relative",
 });
 
 const IconGroup = styled(Box, {
   display: "flex",
-  gap: 25
+  gap: 25,
 });
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
-    link: "",
+    link: "/",
   },
   {
     label: "TIL",
@@ -72,22 +98,35 @@ const SOCIAL_ITEMS: Array<SocialItem> = [
   },
   {
     icon: TwitterIcon,
-    link: 'https://twitter.com/nsehic_official'
-  }
+    link: "https://twitter.com/nsehic_official",
+  },
 ];
 
+const isSelected = (item: NavItem, routePath: string) => {
+    return routePath === item.link || (item.link !== "/" && routePath.startsWith(item.link));
+}
+
 const Navbar: React.FC<Props> = () => {
+  const { asPath: routePath } = useRouter();
+  const selectedPageIdx = NAV_ITEMS.findIndex(item => isSelected(item, routePath));
+  const [navIndex, setNavIndex] = useState(selectedPageIdx);
+
   return (
     <Nav>
-      <NavList>
-        {NAV_ITEMS.map((item, itemIdx) => (
-          <NavItem key={`${item.label}-${itemIdx}`}>
-            <Link href={item.link}>
-              <a>{item.label}</a>
-            </Link>
-          </NavItem>
-        ))}
-      </NavList>
+      <NavListContainer>
+        <NavList>
+          {NAV_ITEMS.map((item, itemIdx) => {
+            return (
+              <NavItem key={`${item.label}-${itemIdx}`} onMouseOver={e => setNavIndex(itemIdx)} onMouseLeave={e => setNavIndex(selectedPageIdx)}>
+                <Link href={item.link}>
+                  <a>{item.label}</a>
+                </Link>
+              </NavItem>
+            );
+          })}
+        </NavList>
+        <SlidingLine css={{left: (navIndex * NAV_WIDTH) + (navIndex * NAV_GAP)}}/>
+      </NavListContainer>
       <IconGroup>
         {SOCIAL_ITEMS.map((item, itemIdx) => {
           const Icon = item.icon;
