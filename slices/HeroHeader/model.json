@@ -1,0 +1,51 @@
+{
+  "id": "hero_header",
+  "type": "SharedSlice",
+  "name": "HeroHeader",
+  "description": "HeroHeader",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroHeader",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "highlight_start": {
+          "type": "Number",
+          "config": {
+            "label": "Highlight Start",
+            "placeholder": ""
+          }
+        },
+        "highlight_end": {
+          "type": "Number",
+          "config": {
+            "label": "Highlight End",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
