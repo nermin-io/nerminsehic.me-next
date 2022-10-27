@@ -1,12 +1,11 @@
-import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import React from 'react';
+import { PrismicRichText } from '@prismicio/react';
+import type { Content } from '@prismicio/client';
+import type { SliceComponentProps } from '@prismicio/react';
 
-/**
- * @typedef {import("@prismicio/client").Content.HeroHeaderSlice} HeroHeaderSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<HeroHeaderSlice>} HeroHeaderProps
- * @param { HeroHeaderProps }
- */
-const HeroHeader = ({ slice }) => (
+export type HeroHeaderProps = SliceComponentProps<Content.HeroHeaderSlice>;
+
+const HeroHeader: React.FC<HeroHeaderProps> = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -19,7 +18,7 @@ const HeroHeader = ({ slice }) => (
       slice.primary.description ?
       <PrismicRichText field={slice.primary.description}/>
       : <p>start by editing this slice from inside Slice Machine!</p>
-    }
+    } 
     <style jsx>{`
         section {
           max-width: 600px;
@@ -33,4 +32,4 @@ const HeroHeader = ({ slice }) => (
   </section>
 )
 
-export default HeroHeader
+export default HeroHeader;

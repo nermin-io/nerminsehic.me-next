@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "slices/index.ts", "slices/HeroHeader/index.tsx", ".slicemachine/prismicio.d.ts"],
   "exclude": ["node_modules"]
 }
