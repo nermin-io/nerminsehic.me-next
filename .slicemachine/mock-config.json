@@ -14,7 +14,7 @@
           },
           "description": {
             "config": {
-              "patternType": "PARAGRAPH",
+              "patternType": "HEADING",
               "blocks": 1
             }
           }

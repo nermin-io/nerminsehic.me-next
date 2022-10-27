@@ -16,8 +16,8 @@ const routes = [
 ];
 
 export const createClient = ({previewData, req, ...config}: PrismicNext.CreateClientConfig = {}) => {
-    const client = Prismic.createClient(sm.apiEndpoint, config);
+    const client = Prismic.createClient(sm.apiEndpoint, {accessToken: process.env.PRISMIC_ACCESS_TOKEN, ...config});
     PrismicNext.enableAutoPreviews({ client, previewData, req});
-    
+
     return client;
 }

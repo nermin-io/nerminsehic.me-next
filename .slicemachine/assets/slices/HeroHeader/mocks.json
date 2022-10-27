@@ -9,19 +9,17 @@
       "title": [
         {
           "type": "heading1",
-          "text": "Smell",
+          "text": "Community",
           "spans": []
         }
       ],
       "description": [
         {
-          "type": "paragraph",
-          "text": "Mollit sint amet exercitation commodo reprehenderit et consequat dolore laborum. Ut pariatur aliquip adipisicing cupidatat dolor qui est velit eiusmod dolor ea officia.",
+          "type": "heading4",
+          "text": "Distance",
           "spans": []
         }
-      ],
-      "highlight_start": 37,
-      "highlight_end": 25
+      ]
     },
     "slice_type": "hero_header"
   }

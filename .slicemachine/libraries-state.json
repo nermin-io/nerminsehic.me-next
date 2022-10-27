@@ -23,32 +23,18 @@
                   "type": "StructuredText",
                   "config": {
                     "label": "Title",
-                    "placeholder": "This is where it all begins...",
+                    "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "heading1"
+                    "single": "heading1,strong"
                   }
                 },
                 "description": {
                   "type": "StructuredText",
                   "config": {
                     "label": "Description",
-                    "placeholder": "A nice description of your feature",
+                    "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph"
-                  }
-                },
-                "highlight_start": {
-                  "type": "Number",
-                  "config": {
-                    "label": "Highlight Start",
-                    "placeholder": ""
-                  }
-                },
-                "highlight_end": {
-                  "type": "Number",
-                  "config": {
-                    "label": "Highlight End",
-                    "placeholder": ""
+                    "single": "heading4,hyperlink,preformatted"
                   }
                 }
               },
@@ -68,26 +54,24 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Smell",
+                  "text": "Community",
                   "spans": []
                 }
               ],
               "description": [
                 {
-                  "type": "paragraph",
-                  "text": "Mollit sint amet exercitation commodo reprehenderit et consequat dolore laborum. Ut pariatur aliquip adipisicing cupidatat dolor qui est velit eiusmod dolor ea officia.",
+                  "type": "heading4",
+                  "text": "Distance",
                   "spans": []
                 }
-              ],
-              "highlight_start": 37,
-              "highlight_end": 25
+              ]
             },
             "slice_type": "hero_header"
           }
         },
         "meta": {
           "fileName": "index",
-          "extension": "js"
+          "extension": "tsx"
         },
         "screenshotPaths": {}
       }

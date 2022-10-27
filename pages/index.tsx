@@ -1,21 +1,31 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import DocumentHead from '../src/components/layout/DocumentHead';
 import Layout from '../src/components/layout/Layout';
-import HeroHeader from '../src/components/HeroHeader';
-import About from '../src/components/slices/About';
-import RecentArticles from '../src/components/RecentArticles';
+import { createClient } from '../prismicio';
+import { components } from '../slices';
+import { SliceZone} from '@prismicio/react';
 
-const Home: NextPage = () => {
+type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Home: NextPage<PageProps> = ({ page }) => {
   return (
     <div>
       <DocumentHead title="Home"/>
       <Layout>
-        <HeroHeader />
-        <About />
-        <RecentArticles />
+        <SliceZone slices={page.data.slices} components={components} />
       </Layout>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ previewData }) => {
+  const client = createClient({ previewData });
+  const page = await client.getSingle('homepage');
+  return {
+    props: {
+      page
+    }
+  }
 }
 
 export default Home;

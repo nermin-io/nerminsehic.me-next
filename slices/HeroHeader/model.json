@@ -15,32 +15,18 @@
           "type": "StructuredText",
           "config": {
             "label": "Title",
-            "placeholder": "This is where it all begins...",
+            "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading1"
+            "single": "heading1,strong"
           }
         },
         "description": {
           "type": "StructuredText",
           "config": {
             "label": "Description",
-            "placeholder": "A nice description of your feature",
+            "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "highlight_start": {
-          "type": "Number",
-          "config": {
-            "label": "Highlight Start",
-            "placeholder": ""
-          }
-        },
-        "highlight_end": {
-          "type": "Number",
-          "config": {
-            "label": "Highlight End",
-            "placeholder": ""
+            "single": "heading4,hyperlink,preformatted"
           }
         }
       },
