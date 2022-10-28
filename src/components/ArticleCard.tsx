@@ -4,7 +4,6 @@ import type { Article } from '../types/Article';
 import Box from './Box';
 import ArticleCardHeader from './ArticleCardHeader';
 import Heading from './Heading';
-import Text from './Text';
 import Button from './Button';
 
 interface Props {
@@ -45,7 +44,7 @@ const ArticleCard: React.FC<Props> = ({ article }) => {
             <Box css={{height: 65, paddingTop: 5}}>
                 <Heading as='h5' lineHeight={1.5}>{article.title}</Heading>
             </Box>
-            <Text>{article.description}</Text>
+            {/* <Text>{article.description}</Text> */}
         </CardContent>
         <CardContent css={{paddingBottom: 5}}>
             <Button>Read Now</Button>

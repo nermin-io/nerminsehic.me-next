@@ -1,15 +1,15 @@
 {
-  "id": "hero_header",
+  "id": "free_text_section",
   "type": "SharedSlice",
-  "name": "HeroHeader",
-  "description": "HeroHeader",
+  "name": "FreeTextSection",
+  "description": "FreeTextSection",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "HeroHeader",
+      "description": "FreeTextSection",
       "primary": {
         "title": {
           "type": "StructuredText",
@@ -17,16 +17,16 @@
             "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading1,strong"
+            "single": "heading5,strong"
           }
         },
-        "description": {
+        "body": {
           "type": "StructuredText",
           "config": {
-            "label": "Description",
+            "label": "Body",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "preformatted,heading4,hyperlink"
+            "single": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
           }
         }
       },

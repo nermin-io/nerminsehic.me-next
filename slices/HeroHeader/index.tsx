@@ -13,34 +13,6 @@ const Header = styled("header", {
   flexDirection: "column",
   justifyContent: "center",
   borderBottom: "1px solid #242424",
-  '& h1': {
-    all: 'unset',
-    fontSize: '4.209rem'
-  },
-  '& h2': {
-    all: 'unset',
-    fontSize: '3.157rem'
-  },
-  '& h3': {
-    all: 'unset',
-    fontSize: '2.369rem'
-  },
-  '& h4': {
-    all: 'unset',
-    fontSize: '1.666rem'
-  },
-  '& h5': {
-    all: 'unset',
-    fontSize: '1.333rem'
-  },
-  '& h6': {
-    all: 'unset',
-    fontSize: '1rem'
-  },
-  '& a': {
-    color: '#DFF962'
-  }
-
   
 });
 const HeroHeader: React.FC<HeroHeaderProps> = ({ slice }) => {

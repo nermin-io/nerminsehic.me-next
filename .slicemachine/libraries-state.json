@@ -1,6 +1,80 @@
 {
   "slices": {
     "components": {
+      "free_text_section": {
+        "library": "slices",
+        "id": "free_text_section",
+        "name": "FreeTextSection",
+        "description": "FreeTextSection",
+        "model": {
+          "id": "free_text_section",
+          "type": "SharedSlice",
+          "name": "FreeTextSection",
+          "description": "FreeTextSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FreeTextSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading5,strong"
+                  }
+                },
+                "body": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Body",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading5",
+                  "text": "Cabin",
+                  "spans": []
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "text": "Occaecat Lorem minim tempor duis deserunt.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "free_text_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
       "hero_header": {
         "library": "slices",
         "id": "hero_header",
@@ -34,7 +108,7 @@
                     "label": "Description",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "heading4,hyperlink,preformatted"
+                    "single": "preformatted,heading4,hyperlink"
                   }
                 }
               },
@@ -54,14 +128,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Community",
+                  "text": "Direct",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "heading4",
-                  "text": "Distance",
+                  "text": "Course",
                   "spans": []
                 }
               ]

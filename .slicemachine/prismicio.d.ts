@@ -46,7 +46,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroHeaderSlice;
+type HomepageDocumentDataSlicesSlice = HeroHeaderSlice | FreeTextSectionSlice;
 /**
  * Homepage document from Prismic
  *
@@ -59,6 +59,55 @@ type HomepageDocumentDataSlicesSlice = HeroHeaderSlice;
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 export type AllDocumentTypes = HomepageDocument;
 /**
+ * Primary content in FreeTextSection → Primary
+ *
+ */
+interface FreeTextSectionSliceDefaultPrimary {
+    /**
+     * Title field in *FreeTextSection → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: free_text_section.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Body field in *FreeTextSection → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: free_text_section.primary.body
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    body: prismicT.RichTextField;
+}
+/**
+ * Default variation for FreeTextSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `FreeTextSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FreeTextSectionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FreeTextSectionSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *FreeTextSection*
+ *
+ */
+type FreeTextSectionSliceVariation = FreeTextSectionSliceDefault;
+/**
+ * FreeTextSection Shared Slice
+ *
+ * - **API ID**: `free_text_section`
+ * - **Description**: `FreeTextSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FreeTextSectionSlice = prismicT.SharedSlice<"free_text_section", FreeTextSectionSliceVariation>;
+/**
  * Primary content in HeroHeader → Primary
  *
  */
@@ -66,43 +115,23 @@ interface HeroHeaderSliceDefaultPrimary {
     /**
      * Title field in *HeroHeader → Primary*
      *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
      * - **API ID Path**: hero_header.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
      * Description field in *HeroHeader → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: *None*
      * - **API ID Path**: hero_header.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     description: prismicT.RichTextField;
-    /**
-     * Highlight Start field in *HeroHeader → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_header.primary.highlight_start
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    highlight_start: prismicT.NumberField;
-    /**
-     * Highlight End field in *HeroHeader → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_header.primary.highlight_end
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    highlight_end: prismicT.NumberField;
 }
 /**
  * Default variation for HeroHeader Slice
@@ -132,6 +161,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice };
     }
 }

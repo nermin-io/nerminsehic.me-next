@@ -2,6 +2,10 @@ import { styled } from '@stitches/react';
 
 const Section = styled('section', {
     padding: '20px 0',
+    '& p': {
+        fontSize: 16,
+        lineHeight: 1.4
+    },
 
     // Apply special highlighting to links in the section unless the <a> contains .no-highlight class
     '& a': {

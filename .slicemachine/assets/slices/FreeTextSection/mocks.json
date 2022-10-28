@@ -8,19 +8,19 @@
     "primary": {
       "title": [
         {
-          "type": "heading1",
-          "text": "Direct",
+          "type": "heading5",
+          "text": "Cabin",
           "spans": []
         }
       ],
-      "description": [
+      "body": [
         {
-          "type": "heading4",
-          "text": "Course",
+          "type": "paragraph",
+          "text": "Occaecat Lorem minim tempor duis deserunt.",
           "spans": []
         }
       ]
     },
-    "slice_type": "hero_header"
+    "slice_type": "free_text_section"
   }
 ]

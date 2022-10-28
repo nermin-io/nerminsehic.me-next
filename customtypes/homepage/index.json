@@ -26,6 +26,9 @@
           "choices": {
             "hero_header": {
               "type": "SharedSlice"
+            },
+            "free_text_section": {
+              "type": "SharedSlice"
             }
           }
         }
