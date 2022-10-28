@@ -2,7 +2,6 @@ import React from 'react';
 import { styled } from '@stitches/react';
 import Section from './Section';
 import Heading from './Heading';
-import TextHighlight from './TextHighlight';
 import type { Article } from '../types/Article';
 import Box from './Box';
 import ArticleCard from './ArticleCard';
@@ -39,7 +38,7 @@ const ArticleList = styled(Box, {
 const RecentArticles: React.FC<Props> = () => {
     return (
       <Section>
-        <Heading as='h5'>Today I Learned <TextHighlight variant="subtle">(TIL)</TextHighlight></Heading>
+        <Heading as='h5'>Today I Learned</Heading>
         {/* <Text css={{fontSize: 16}}>My learnings about web technologies and strategies.</Text> */}
         <ArticleList>
             { RECENT_ARTICLES.map((article, idx) => (

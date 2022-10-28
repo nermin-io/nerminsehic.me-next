@@ -54,14 +54,14 @@
               "title": [
                 {
                   "type": "heading5",
-                  "text": "Cabin",
+                  "text": "About",
                   "spans": []
                 }
               ],
               "body": [
                 {
                   "type": "paragraph",
-                  "text": "Occaecat Lorem minim tempor duis deserunt.",
+                  "text": "My name is Nermin",
                   "spans": []
                 }
               ]
@@ -73,7 +73,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/FreeTextSection/default/preview.png",
+            "width": 800,
+            "height": 600
+          }
+        }
       },
       "hero_header": {
         "library": "slices",
@@ -141,6 +147,62 @@
               ]
             },
             "slice_type": "hero_header"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "tsx"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/HeroHeader/default/preview.png",
+            "width": 800,
+            "height": 600
+          }
+        }
+      },
+      "text_slider": {
+        "library": "slices",
+        "id": "text_slider",
+        "name": "TextSlider",
+        "description": "TextSlider",
+        "model": {
+          "id": "text_slider",
+          "type": "SharedSlice",
+          "name": "TextSlider",
+          "description": "TextSlider",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextSlider",
+              "primary": {},
+              "items": {
+                "text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "text": "serious"
+              }
+            ],
+            "primary": {},
+            "slice_type": "text_slider"
           }
         },
         "meta": {

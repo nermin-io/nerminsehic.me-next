@@ -29,6 +29,9 @@
             },
             "free_text_section": {
               "type": "SharedSlice"
+            },
+            "text_slider": {
+              "type": "SharedSlice"
             }
           }
         }

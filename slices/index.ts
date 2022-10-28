@@ -2,13 +2,16 @@
 
 import FreeTextSection from './FreeTextSection';
 import HeroHeader from './HeroHeader';
+import TextSlider from './TextSlider';
 
 export {
 	FreeTextSection,
 	HeroHeader,
+	TextSlider,
 };
 
 export const components = {
 	free_text_section: FreeTextSection,
 	hero_header: HeroHeader,
+	text_slider: TextSlider,
 };

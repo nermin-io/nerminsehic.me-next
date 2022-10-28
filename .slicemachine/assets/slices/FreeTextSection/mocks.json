@@ -9,14 +9,14 @@
       "title": [
         {
           "type": "heading5",
-          "text": "Cabin",
+          "text": "About",
           "spans": []
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Occaecat Lorem minim tempor duis deserunt.",
+          "text": "My name is Nermin",
           "spans": []
         }
       ]

@@ -46,7 +46,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroHeaderSlice | FreeTextSectionSlice;
+type HomepageDocumentDataSlicesSlice = HeroHeaderSlice | FreeTextSectionSlice | TextSliderSlice;
 /**
  * Homepage document from Prismic
  *
@@ -156,11 +156,50 @@ type HeroHeaderSliceVariation = HeroHeaderSliceDefault;
  *
  */
 export type HeroHeaderSlice = prismicT.SharedSlice<"hero_header", HeroHeaderSliceVariation>;
+/**
+ * Item in TextSlider → Items
+ *
+ */
+export interface TextSliderSliceDefaultItem {
+    /**
+     * Text field in *TextSlider → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_slider.items[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+}
+/**
+ * Default variation for TextSlider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TextSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextSliderSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<TextSliderSliceDefaultItem>>;
+/**
+ * Slice variation for *TextSlider*
+ *
+ */
+type TextSliderSliceVariation = TextSliderSliceDefault;
+/**
+ * TextSlider Shared Slice
+ *
+ * - **API ID**: `text_slider`
+ * - **Description**: `TextSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextSliderSlice = prismicT.SharedSlice<"text_slider", TextSliderSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
     }
 }
