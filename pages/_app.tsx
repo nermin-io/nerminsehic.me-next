@@ -6,7 +6,7 @@ import { PrismicPreview } from '@prismicio/next';
 import { createClient, repositoryName } from '../prismicio';
 import Layout from '../src/components/layout/Layout';
 import { GetStaticProps } from 'next';
-import { NavigationDocument } from '../.slicemachine/prismicio';
+import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
 
 type AppProps<P = any> = {
   pageProps: P;
@@ -14,6 +14,7 @@ type AppProps<P = any> = {
 
 type Global = {
   navigation: NavigationDocument<string>;
+  footer: FooterDocument<string>;
 }
 
 interface PageProps {
@@ -28,7 +29,7 @@ function BlogApplication({ Component, pageProps }: AppProps<PageProps>) {
       </Link>
     )}>
       <PrismicPreview repositoryName={repositoryName}>
-        <Layout navData={pageProps.global.navigation}>
+        <Layout navData={pageProps.global.navigation} footerData={pageProps.global.footer}>
           <Component {...pageProps} />
         </Layout>
       </PrismicPreview>

@@ -19,12 +19,14 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
   const page = await client.getSingle('homepage');
   const navigation = await client.getSingle('navigation');
+  const footer = await client.getSingle('footer');
 
   return {
     props: {
       page,
       global: {
-        navigation
+        navigation,
+        footer
       }
     }
   }

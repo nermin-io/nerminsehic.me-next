@@ -1,8 +1,12 @@
 import React from 'react';
 import { styled } from '@stitches/react';
 import Box from '../Box';
+import { FooterDocument } from '../../../.slicemachine/prismicio';
+import { PrismicRichText } from "@prismicio/react";
 
-interface Props {}
+interface Props {
+    data: FooterDocument<string>;
+}
 
 const BaseFooter = styled('footer', {
     height: 46,
@@ -15,15 +19,25 @@ const FooterContainer = styled(Box, {
     margin: '0 auto',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
+    '& p:first-child': {
+        fontSize: 16,
+        fontWeight: 500
+    },
+
+    '& p:last-child': {
+        fontSize: 13,
+        color: '#A7A7A7'
+    }
 });
 
-const Footer: React.FC<Props> = () => {
+const Footer: React.FC<Props> = ({ data: footer }) => {
     return (
         <BaseFooter>
             <FooterContainer>
-                {/* <Text css={{fontSize: 16, fontWeight: 500}}>Nermin Sehic</Text>
-                <Text css={{fontSize: 13, color: '#A7A7A7'}}>Copyright &copy; Nermin Sehic 2022</Text> */}
+                <PrismicRichText field={footer.data.title} />
+                <PrismicRichText field={footer.data.copyright} />
             </FooterContainer>
         </BaseFooter>
     );

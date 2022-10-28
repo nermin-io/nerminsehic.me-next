@@ -13,11 +13,13 @@ const PostsIndex: NextPage = () => {
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
     const client = createClient({ previewData });
     const navigation = await client.getSingle('navigation');
+    const footer = await client.getSingle('footer');
   
     return {
       props: {
         global: {
-          navigation
+          navigation,
+          footer
         }
       }
     }

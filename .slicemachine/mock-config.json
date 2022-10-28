@@ -1,7 +1,21 @@
 {
   "_cts": {
     "homepage": {},
-    "navigation": {}
+    "navigation": {},
+    "footer": {
+      "copyright": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "HeroHeader": {

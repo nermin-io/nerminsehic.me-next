@@ -1,0 +1,29 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "footer",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Quis sint ad Lorem. Amet reprehenderit labore quis. Dolor enim ea officia.",
+        "spans": []
+      }
+    ],
+    "copyright": [
+      {
+        "type": "paragraph",
+        "text": "Consequat amet ea laboris. Aliquip voluptate Lorem quis cupidatat laboris anim ut minim. Adipisicing eu id aliqua anim nostrud cillum duis in enim nostrud tempor irure velit.",
+        "spans": []
+      }
+    ]
+  }
+}
