@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { styled } from "@stitches/react";
@@ -58,15 +58,20 @@ const isSelected = (item: Simplify<Content.NavLinkSliceDefaultItem>, routePath: 
   );
 };
 
+const getCurrentPageIdx = (slice: Content.NavLinkSlice, routePath: string) => {
+  return slice.items.findIndex((item) => isSelected(item, routePath));
+}
+
 const NavLink: React.FC<NavLinkProps> = ({ slice }) => {
   const { asPath: routePath } = useRouter();
-  console.log(routePath);
-  console.log(slice.items);
-  const selectedPageIdx = slice.items.findIndex((item) =>
-    isSelected(item, routePath)
-  );
-  const [navIndex, setNavIndex] = useState(selectedPageIdx);
-  console.log(navIndex);
+  
+  const [navIndex, setNavIndex] = useState(getCurrentPageIdx(slice, routePath));
+
+
+  useEffect(() => {
+    setNavIndex(getCurrentPageIdx(slice, routePath));
+  }, [routePath]);
+  
 
   return (
     <NavListContainer>
@@ -78,7 +83,7 @@ const NavLink: React.FC<NavLinkProps> = ({ slice }) => {
               key={`${item.label}-${itemIdx}`}
               css={{ fontWeight: itemIsSelected ? 500 : 400 }}
               onMouseOver={() => setNavIndex(itemIdx)}
-              onMouseLeave={() => setNavIndex(selectedPageIdx)}
+              onMouseLeave={() => setNavIndex(getCurrentPageIdx(slice, routePath))}
             >
               <Link href={item.path || '/'}>
                 <a>{item.label}</a>
