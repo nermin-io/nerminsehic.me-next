@@ -161,6 +161,131 @@
           }
         }
       },
+      "nav_link": {
+        "library": "slices",
+        "id": "nav_link",
+        "name": "NavLink",
+        "description": "NavLink",
+        "model": {
+          "id": "nav_link",
+          "type": "SharedSlice",
+          "name": "NavLink",
+          "description": "NavLink",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "NavLink",
+              "primary": {},
+              "items": {
+                "label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Label",
+                    "placeholder": ""
+                  }
+                },
+                "path": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Path",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "label": "attached",
+                "path": "inch"
+              }
+            ],
+            "primary": {},
+            "slice_type": "nav_link"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "social_link": {
+        "library": "slices",
+        "id": "social_link",
+        "name": "SocialLink",
+        "description": "SocialLink",
+        "model": {
+          "id": "social_link",
+          "type": "SharedSlice",
+          "name": "SocialLink",
+          "description": "SocialLink",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SocialLink",
+              "primary": {},
+              "items": {
+                "type": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Type",
+                    "placeholder": "",
+                    "options": [
+                      "github",
+                      "twitter",
+                      "linkedin"
+                    ]
+                  }
+                },
+                "path": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Path",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "type": "twitter",
+                "path": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "social_link"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "text_slider": {
         "library": "slices",
         "id": "text_slider",

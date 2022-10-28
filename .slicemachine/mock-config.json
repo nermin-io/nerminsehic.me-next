@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "homepage": {}
+    "homepage": {},
+    "navigation": {}
   },
   "slices": {
     "HeroHeader": {
@@ -42,6 +43,18 @@
     "TextSlider": {
       "default": {
         "primary": {}
+      }
+    },
+    "NavLink": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "SocialLink": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

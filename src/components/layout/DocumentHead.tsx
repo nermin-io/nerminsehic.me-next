@@ -3,13 +3,14 @@ import Head from "next/head";
 
 interface Props {
     title: string;
+    description: string;
 }
 
-const DocumentHead: React.FC<Props> = ({ title }) => {
+const DocumentHead: React.FC<Props> = ({ title, description }) => {
   return (
       <Head>
-        <title>Nermin Sehic :: Software Developer - {title}</title>
-        <meta name="description" content="Nermin is a developer based in Melbourne, specialising in full-stack using Java/Scala & Javascript." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Head>
   );
 };

@@ -57,7 +57,36 @@ type HomepageDocumentDataSlicesSlice = HeroHeaderSlice | FreeTextSectionSlice | 
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
-export type AllDocumentTypes = HomepageDocument;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = NavLinkSlice | SocialLinkSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+export type AllDocumentTypes = HomepageDocument | NavigationDocument;
 /**
  * Primary content in FreeTextSection → Primary
  *
@@ -157,6 +186,104 @@ type HeroHeaderSliceVariation = HeroHeaderSliceDefault;
  */
 export type HeroHeaderSlice = prismicT.SharedSlice<"hero_header", HeroHeaderSliceVariation>;
 /**
+ * Item in NavLink → Items
+ *
+ */
+export interface NavLinkSliceDefaultItem {
+    /**
+     * Label field in *NavLink → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_link.items[].label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    label: prismicT.KeyTextField;
+    /**
+     * Path field in *NavLink → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_link.items[].path
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    path: prismicT.KeyTextField;
+}
+/**
+ * Default variation for NavLink Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavLink`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavLinkSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<NavLinkSliceDefaultItem>>;
+/**
+ * Slice variation for *NavLink*
+ *
+ */
+type NavLinkSliceVariation = NavLinkSliceDefault;
+/**
+ * NavLink Shared Slice
+ *
+ * - **API ID**: `nav_link`
+ * - **Description**: `NavLink`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavLinkSlice = prismicT.SharedSlice<"nav_link", NavLinkSliceVariation>;
+/**
+ * Item in SocialLink → Items
+ *
+ */
+export interface SocialLinkSliceDefaultItem {
+    /**
+     * Type field in *SocialLink → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_link.items[].type
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    type: prismicT.SelectField<"github" | "twitter" | "linkedin">;
+    /**
+     * Path field in *SocialLink → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_link.items[].path
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    path: prismicT.LinkField;
+}
+/**
+ * Default variation for SocialLink Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SocialLink`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SocialLinkSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<SocialLinkSliceDefaultItem>>;
+/**
+ * Slice variation for *SocialLink*
+ *
+ */
+type SocialLinkSliceVariation = SocialLinkSliceDefault;
+/**
+ * SocialLink Shared Slice
+ *
+ * - **API ID**: `social_link`
+ * - **Description**: `SocialLink`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SocialLinkSlice = prismicT.SharedSlice<"social_link", SocialLinkSliceVariation>;
+/**
  * Item in TextSlider → Items
  *
  */
@@ -200,6 +327,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
     }
 }

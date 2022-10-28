@@ -4,16 +4,13 @@ import Layout from '../src/components/layout/Layout';
 import { createClient } from '../prismicio';
 import { components } from '../slices';
 import { SliceZone} from '@prismicio/react';
-
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const Home: NextPage<PageProps> = ({ page }) => {
   return (
     <div>
-      <DocumentHead title="Home"/>
-      <Layout>
+      <DocumentHead title={page.data.title} description={page.data.description} />
         <SliceZone slices={page.data.slices} components={components} />
-      </Layout>
     </div>
   )
 }
@@ -21,9 +18,14 @@ const Home: NextPage<PageProps> = ({ page }) => {
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
   const page = await client.getSingle('homepage');
+  const navigation = await client.getSingle('navigation');
+
   return {
     props: {
-      page
+      page,
+      global: {
+        navigation
+      }
     }
   }
 }

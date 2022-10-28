@@ -4,9 +4,11 @@ import Container from "./Container";
 import Navbar from "./Navbar";
 import Box from "../Box";
 import Footer from "./Footer";
+import { NavigationDocument } from "../../../.slicemachine/prismicio";
 
 interface Props {
   children: React.ReactNode | React.ReactNode[];
+  navData: NavigationDocument<string>;
 }
 
 const Content = styled(Box, {});
@@ -14,11 +16,11 @@ const Spacer = styled(Box, {
     height: 20
 });
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, navData }) => {
   return (
     <>
       <Container>
-        <Navbar />
+        <Navbar data={navData} />
         <Content>{children}</Content>
       </Container>
       <Spacer />

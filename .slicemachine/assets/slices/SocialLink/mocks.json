@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "type": "twitter",
+        "path": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ],
+    "primary": {},
+    "slice_type": "social_link"
+  }
+]
