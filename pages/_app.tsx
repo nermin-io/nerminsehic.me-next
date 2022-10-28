@@ -29,7 +29,7 @@ function BlogApplication({ Component, pageProps }: AppProps<PageProps>) {
       </Link>
     )}>
       <PrismicPreview repositoryName={repositoryName}>
-        <Layout navData={pageProps.global.navigation} footerData={pageProps.global.footer}>
+        <Layout navData={pageProps?.global?.navigation} footerData={pageProps?.global?.footer}>
           <Component {...pageProps} />
         </Layout>
       </PrismicPreview>

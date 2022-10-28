@@ -33,6 +33,7 @@ const FooterContainer = styled(Box, {
 });
 
 const Footer: React.FC<Props> = ({ data: footer }) => {
+    if(!footer) return <div></div>;
     return (
         <BaseFooter>
             <FooterContainer>

@@ -18,6 +18,7 @@ const Nav = styled("nav", {
 });
 
 const Navbar: React.FC<Props> = ({ data: nav }) => {
+    if(!nav) return <div></div>;
   return (
     <Nav>
         <SliceZone slices={nav.data.slices} components={components} />
