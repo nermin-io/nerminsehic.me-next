@@ -1,0 +1,32 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "post",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "type": "java",
+    "title": "sign",
+    "snippet": [
+      {
+        "type": "paragraph",
+        "text": "Adipisicing officia enim amet sit reprehenderit nisi excepteur enim deserunt quis eiusmod. Dolore aliqua nisi reprehenderit laboris id exercitation deserunt fugiat eiusmod consectetur occaecat.",
+        "spans": []
+      }
+    ],
+    "published_at": "2021-09-10",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Excepteur occaecat nostrud non velit incididunt aliquip culpa. Aliquip deserunt nisi aute aliqua ad. Nostrud officia in duis non deserunt aute aute consequat voluptate.",
+        "spans": []
+      }
+    ]
+  }
+}

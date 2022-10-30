@@ -121,7 +121,75 @@ type NavigationDocumentDataSlicesSlice = NavLinkSlice | SocialLinkSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument;
+/** Content for Post documents */
+interface PostDocumentData {
+    /**
+     * Type field in *Post*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post.type
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    type: prismicT.SelectField<"scala" | "java" | "typescript">;
+    /**
+     * Title field in *Post*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Snippet field in *Post*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post.snippet
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    snippet: prismicT.RichTextField;
+    /**
+     * Published At field in *Post*
+     *
+     * - **Field Type**: Date
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post.published_at
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/date
+     *
+     */
+    published_at: prismicT.DateField;
+    /**
+     * Body field in *Post*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post.body
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    body: prismicT.RichTextField;
+}
+/**
+ * Post document from Prismic
+ *
+ * - **API ID**: `post`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PostDocument;
 /**
  * Primary content in FreeTextSection → Primary
  *
@@ -362,6 +430,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
+        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PostDocumentData, PostDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
     }
 }

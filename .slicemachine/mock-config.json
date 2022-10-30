@@ -15,6 +15,20 @@
           "blocks": 1
         }
       }
+    },
+    "post": {
+      "snippet": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "body": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
     }
   },
   "slices": {
