@@ -6,7 +6,6 @@ import JavaLogo from './logos/JavaLogo';
 import ScalaLogo from './logos/ScalaLogo';
 import type { Language } from '../types/Article';
 
-
 interface Props {
     language: Language;
 }

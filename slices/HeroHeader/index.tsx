@@ -13,21 +13,13 @@ const Header = styled("header", {
   flexDirection: "column",
   justifyContent: "center",
   borderBottom: "1px solid #242424",
-  
 });
+
 const HeroHeader: React.FC<HeroHeaderProps> = ({ slice }) => {
   return (
     <Header>
-      {slice.primary.title ? (
-        <PrismicRichText field={slice.primary.title} />
-      ) : (
-        <h2>Template slice, update me!</h2>
-      )}
-      {slice.primary.description ? (
-        <PrismicRichText field={slice.primary.description} />
-      ) : (
-        <p>start by editing this slice from inside Slice Machine!</p>
-      )}
+      <PrismicRichText field={slice.primary.title} />
+      <PrismicRichText field={slice.primary.description} />
     </Header>
   );
 };

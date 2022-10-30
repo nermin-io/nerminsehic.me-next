@@ -64,14 +64,11 @@ const getCurrentPageIdx = (slice: Content.NavLinkSlice, routePath: string) => {
 
 const NavLink: React.FC<NavLinkProps> = ({ slice }) => {
   const { asPath: routePath } = useRouter();
-  
   const [navIndex, setNavIndex] = useState(getCurrentPageIdx(slice, routePath));
-
 
   useEffect(() => {
     setNavIndex(getCurrentPageIdx(slice, routePath));
-  }, [routePath]);
-  
+  }, [routePath]);  
 
   return (
     <NavListContainer>
@@ -92,7 +89,7 @@ const NavLink: React.FC<NavLinkProps> = ({ slice }) => {
           );
         })}
       </NavList>
-      <SlidingLine css={{ left: navIndex * NAV_WIDTH + navIndex * NAV_GAP }} />
+      <SlidingLine css={{ left: (navIndex * NAV_WIDTH) + (navIndex * NAV_GAP) }} />
     </NavListContainer>
   );
 };
