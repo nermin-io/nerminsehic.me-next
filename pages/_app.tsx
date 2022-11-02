@@ -6,6 +6,8 @@ import { PrismicPreview } from '@prismicio/next';
 import { repositoryName } from '../prismicio';
 import Layout from '../src/components/layout/Layout';
 import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
+import FormattedCode from '../src/components/FormattedCode';
+import type { JSXMapSerializer } from '@prismicio/react';
 
 type AppProps<P = any> = {
   pageProps: P;
@@ -20,9 +22,17 @@ interface PageProps {
   global: Global;
 }
 
+const richTextComponents: JSXMapSerializer = {
+  preformatted: ({ text }) => (
+   <FormattedCode language='scala'>
+    { text }
+   </FormattedCode> 
+  )
+}
+
 function BlogApplication({ Component, pageProps }: AppProps<PageProps>) {
   return (
-    <PrismicProvider internalLinkComponent={({ href, ...props}) => (
+    <PrismicProvider richTextComponents={richTextComponents} internalLinkComponent={({ href, ...props}) => (
       <Link href={href}>
         <a {...props} />
       </Link>
