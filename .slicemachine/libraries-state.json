@@ -217,7 +217,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/NavLink/default/preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
       },
       "social_link": {
         "library": "slices",
@@ -284,7 +290,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/SocialLink/default/preview.png",
+            "width": 390,
+            "height": 844
+          }
+        }
       },
       "text_slider": {
         "library": "slices",
@@ -334,7 +346,13 @@
           "fileName": "index",
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/TextSlider/default/preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
       }
     }
   }

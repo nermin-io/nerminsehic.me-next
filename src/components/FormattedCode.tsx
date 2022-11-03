@@ -1,19 +1,16 @@
 import React from 'react';
 import { styled } from '@stitches/react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import { nord } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 interface Props {
     language: string;
     children: string | undefined;
 }
 
-const renderChildren = (children: JSX.Element[]) => {
-    return children.map(child => child.props);
-}
-
 const FormattedCode: React.FC<Props> = ({ language, children }) => {
     return (
-        <SyntaxHighlighter language={language}> 
+        <SyntaxHighlighter language={language} style={nord}> 
             { children || '' }
         </SyntaxHighlighter>        
     );
