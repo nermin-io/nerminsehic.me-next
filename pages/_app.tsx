@@ -9,7 +9,7 @@ import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
 import FormattedCode from '../components/FormattedCode';
 import type { JSXMapSerializer } from '@prismicio/react';
 
-const useLanguage = (text: string | undefined) => {
+const determineLanguage = (text: string | undefined) => {
   const fallbackLanguage = 'plaintext';
 
   if(!text) return [fallbackLanguage, ''];
@@ -35,7 +35,7 @@ interface PageProps {
 
 const richTextComponents: JSXMapSerializer = {
   preformatted: ({ text }) => {
-    const [language, code] = useLanguage(text);
+    const [language, code] = determineLanguage(text);
     return <FormattedCode language={language}>{code}</FormattedCode>;
   },
 };
