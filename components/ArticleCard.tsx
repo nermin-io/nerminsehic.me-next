@@ -51,7 +51,7 @@ const ArticleCard: React.FC<Props> = ({ post }) => {
         <PrismicRichText field={post.data.snippet} />
       </CardContent>
       <CardContent css={{ paddingBottom: 5 }}>
-        <Link href={`/posts/${post.uid}`}>
+        <Link href={`${post.url}`}>
           <a>
             <Button>Read Now</Button>
           </a>

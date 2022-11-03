@@ -4,7 +4,7 @@ import type { SliceComponentProps } from "@prismicio/react";
 import { styled } from "@stitches/react";
 import { Simplify } from "../../.slicemachine/prismicio";
 import { useRouter } from 'next/router';
-import Box from "../../src/components/Box";
+import Box from "../../components/Box";
 import Link from 'next/link';
 
 export type NavLinkProps = SliceComponentProps<Content.NavLinkSlice>;

@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "@stitches/react";
-import { NavigationDocument } from "../../../.slicemachine/prismicio";
+import { NavigationDocument } from "../../.slicemachine/prismicio";
 import { SliceZone } from "@prismicio/react";
-import { components } from '../../../slices';
+import { components } from '../../slices';
 
 interface Props {
     data: NavigationDocument<string>;

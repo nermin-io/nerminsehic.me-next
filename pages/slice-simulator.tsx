@@ -3,7 +3,7 @@ import { SliceZone } from "@prismicio/react";
 import { styled } from '@stitches/react';
 import state from "../.slicemachine/libraries-state.json";
 import { components } from "../slices";
-import Box from "../src/components/Box";
+import Box from "../components/Box";
 
 
 const Wrapper = styled(Box, {

@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { PrismicProvider } from '@prismicio/react';
 import { PrismicPreview } from '@prismicio/next';
 import { repositoryName } from '../prismicio';
-import Layout from '../src/components/layout/Layout';
+import Layout from '../components/layout/Layout';
 import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
-import FormattedCode from '../src/components/FormattedCode';
+import FormattedCode from '../components/FormattedCode';
 import type { JSXMapSerializer } from '@prismicio/react';
 
 const useLanguage = (text: string | undefined) => {

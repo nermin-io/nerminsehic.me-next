@@ -1,9 +1,9 @@
 import type { GetStaticProps, GetStaticPaths, NextPage, InferGetStaticPropsType } from 'next';
 import { createClient } from '../../prismicio';
-import DocumentHead from '../../src/components/layout/DocumentHead';
+import DocumentHead from '../../components/layout/DocumentHead';
 import type { Content } from '@prismicio/client';
-import ArticlePageHeader from '../../src/components/ArticlePageHeader';
-import ArticleBody from '../../src/components/ArticleBody';
+import ArticlePageHeader from '../../components/ArticlePageHeader';
+import ArticleBody from '../../components/ArticleBody';
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 

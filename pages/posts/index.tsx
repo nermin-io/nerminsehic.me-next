@@ -1,23 +1,15 @@
 import type { GetStaticProps, NextPage, InferGetStaticPropsType } from 'next';
 import { createClient } from '../../prismicio';
-import DocumentHead from '../../src/components/layout/DocumentHead';
-import PageHeader from '../../src/components/PageHeader';
-import { styled } from '@stitches/react';
-import Box from '../../src/components/Box';
+import DocumentHead from '../../components/layout/DocumentHead';
+import PageHeader from '../../components/PageHeader';
 import { Query } from '@prismicio/types';
 import type { Content } from '@prismicio/client';
-import ArticleCard from '../../src/components/ArticleCard';
+import ArticleCard from '../../components/ArticleCard';
+import ArticleList from '../../components/ArticleList';
 
 interface PageProps {
   posts: Query<Content.PostDocument<string>>;
 }
-
-const ArticleList = styled(Box, {
-  display: 'flex',
-  gap: 14,
-  padding: '20px 0',
-  flexWrap: 'wrap'
-});
 
 const PostsIndex: NextPage<PageProps> = ({ posts }) => {
   return (

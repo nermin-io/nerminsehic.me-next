@@ -4,7 +4,7 @@ import Container from "./Container";
 import Navbar from "./Navbar";
 import Box from "../Box";
 import Footer from "./Footer";
-import { FooterDocument, NavigationDocument } from "../../../.slicemachine/prismicio";
+import { FooterDocument, NavigationDocument } from "../../.slicemachine/prismicio";
 
 interface Props {
   children: React.ReactNode | React.ReactNode[];

@@ -2,10 +2,10 @@ import React from "react";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { styled } from "@stitches/react";
-import GithubIcon from "../../src/components/icons/GithubIcon";
-import LinkedinIcon from "../../src/components/icons/LinkedinIcon";
-import TwitterIcon from "../../src/components/icons/TwitterIcon";
-import Box from "../../src/components/Box";
+import GithubIcon from "../../components/icons/GithubIcon";
+import LinkedinIcon from "../../components/icons/LinkedinIcon";
+import TwitterIcon from "../../components/icons/TwitterIcon";
+import Box from "../../components/Box";
 import { PrismicLink } from "@prismicio/react";
 
 export type SocialLinkProps = SliceComponentProps<Content.SocialLinkSlice>;
