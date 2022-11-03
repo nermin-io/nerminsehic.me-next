@@ -9,6 +9,17 @@ import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
 import FormattedCode from '../src/components/FormattedCode';
 import type { JSXMapSerializer } from '@prismicio/react';
 
+const useLanguage = (text: string | undefined) => {
+  const fallbackLanguage = 'plaintext';
+
+  if(!text) return [fallbackLanguage, ''];
+  if(!text.startsWith('//')) return [fallbackLanguage, text];
+
+  const [firstLine, ...lines ] = text.split('\n');
+  const language = firstLine.replace('//','').trim();
+  return [language, lines.join('\n')];
+}
+
 type AppProps<P = any> = {
   pageProps: P;
 } & Omit<NextAppProps<P>, "pageProps">;
@@ -23,12 +34,11 @@ interface PageProps {
 }
 
 const richTextComponents: JSXMapSerializer = {
-  preformatted: ({ text }) => (
-   <FormattedCode language='scala'>
-    { text }
-   </FormattedCode> 
-  )
-}
+  preformatted: ({ text }) => {
+    const [language, code] = useLanguage(text);
+    return <FormattedCode language={language}>{code}</FormattedCode>;
+  },
+};
 
 function BlogApplication({ Component, pageProps }: AppProps<PageProps>) {
   return (
