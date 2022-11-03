@@ -17,16 +17,23 @@ const Spacer = styled(Box, {
     height: 20
 });
 
+const FullHeight = styled(Box, {
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between'
+});
+
 const Layout: React.FC<Props> = ({ children, navData, footerData }) => {
   return (
-    <>
+    <FullHeight>
       <Container>
         <Navbar data={navData} />
         <Content>{children}</Content>
       </Container>
       <Spacer />
-      <Footer data={footerData}/>
-    </>
+      <Footer data={footerData} />
+    </FullHeight>
   );
 };
 
