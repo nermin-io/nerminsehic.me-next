@@ -4,10 +4,10 @@ import Box from './Box';
 import TypescriptLogo from './logos/TypescriptLogo';
 import JavaLogo from './logos/JavaLogo';
 import ScalaLogo from './logos/ScalaLogo';
-import type { Language } from '../types/Article';
+import * as PrismicType from '@prismicio/types';
 
 interface Props {
-    language: Language;
+    language: PrismicType.SelectField<"java" | "scala" | "typescript">;
 }
 
 const languageVariants = {
@@ -42,7 +42,9 @@ const CardHeader = styled(Box, {
 });
 
 const ArticleCardHeader: React.FC<Props> = ({ language }) => {
-    const Logo = logos[language as Language];
+    if(!language) return <div>Invalid Language Type</div>
+    
+    const Logo = logos[language];
     return (
         <CardHeader language={language}>
             <Logo />

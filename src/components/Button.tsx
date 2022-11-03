@@ -2,6 +2,7 @@ import { styled } from '@stitches/react';
 
 const Button = styled('button', {
     all: 'unset',
+    width: '100%',
     borderRadius: 3,
     display: 'inline-flex',
     lineHeight: 1,

@@ -10,7 +10,7 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 const PostPage: NextPage<PageProps> = ({ post }) => {
     return (
         <div>
-            <DocumentHead title={`Nermin Sehic :: ${post.data.title}`} description={post.data.description } />
+            <DocumentHead title={`${post.data.title} :: Nermin Sehic`} description={post.data.description } />
             <ArticlePageHeader post={post as Content.PostDocument} />
             <ArticleBody post={post as Content.PostDocument} />
         </div>
