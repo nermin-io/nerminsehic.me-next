@@ -9,13 +9,14 @@ import ArticleList from '../../components/ArticleList';
 
 interface PageProps {
   posts: Query<Content.PostDocument<string>>;
+  page: Content.PostIndexDocument<string>;
 }
 
-const PostsIndex: NextPage<PageProps> = ({ posts }) => {
+const PostsIndex: NextPage<PageProps> = ({ posts, page }) => {
   return (
     <div>
-      <DocumentHead title="Today I Learned :: Nermin Sehic" description="A blog about my learning on software engineering topics." />
-      <PageHeader title='Today I Learned Blog (TIL)' />
+      <DocumentHead title={`${page.data.document_title} :: Nermin Sehic`} description={`${page.data.document_description}`}/>
+      <PageHeader title={`${page.data.title}`} />
       <ArticleList>
         { posts.results.map(post => (
             <ArticleCard key={post.id} post={post} />
@@ -31,6 +32,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
     const footer = await client.getSingle('footer');
 
     const posts = await client.getByType('post');
+    const page = await client.getSingle('post_index');
   
     return {
       props: {
@@ -38,7 +40,8 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
           navigation,
           footer
         },
-        posts
+        posts,
+        page
       }
     }
   }

@@ -29,7 +29,8 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "post_index": {}
   },
   "slices": {
     "HeroHeader": {

@@ -121,6 +121,52 @@ type NavigationDocumentDataSlicesSlice = NavLinkSlice | SocialLinkSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+/** Content for Post Index documents */
+interface PostIndexDocumentData {
+    /**
+     * Title field in *Post Index*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_index.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Document Title field in *Post Index*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_index.document_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    document_title: prismicT.KeyTextField;
+    /**
+     * Document Description field in *Post Index*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_index.document_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    document_description: prismicT.KeyTextField;
+}
+/**
+ * Post Index document from Prismic
+ *
+ * - **API ID**: `post_index`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostIndexDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PostIndexDocumentData>, "post_index", Lang>;
 /** Content for Post documents */
 interface PostDocumentData {
     /**
@@ -189,7 +235,7 @@ interface PostDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PostDocument;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PostIndexDocument | PostDocument;
 /**
  * Primary content in FreeTextSection → Primary
  *
@@ -430,6 +476,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PostDocumentData, PostDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
+        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PostIndexDocumentData, PostIndexDocument, PostDocumentData, PostDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
     }
 }
