@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@stitches/react";
+import { styled } from '../../stitches';
 import { NavigationDocument } from "../../.slicemachine/prismicio";
 import { SliceZone } from "@prismicio/react";
 import { components } from '../../slices';

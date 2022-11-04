@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '@stitches/react';
+import { styled } from '../../stitches';
 import Box from '../Box';
 import { FooterDocument } from '../../.slicemachine/prismicio';
 import { PrismicRichText } from "@prismicio/react";
@@ -20,7 +20,11 @@ const FooterContainer = styled(Box, {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-
+    '@large': {
+        width: '100%',
+        padding: '0 20px'
+    },
+    
     '& p:first-child': {
         fontSize: 16,
         fontWeight: 500

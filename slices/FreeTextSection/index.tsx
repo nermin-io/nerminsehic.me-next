@@ -12,4 +12,4 @@ const FreeTextSection: React.FC<FreeTextSectionProps> = ({ slice }) => (
   </Section>
 )
 
-export default FreeTextSection
+export default FreeTextSection;

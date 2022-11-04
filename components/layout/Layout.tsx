@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@stitches/react";
+import { styled } from '../../stitches';
 import Container from "./Container";
 import Navbar from "./Navbar";
 import Box from "../Box";

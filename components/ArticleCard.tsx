@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '@stitches/react';
+import { styled } from '../stitches';
 import Box from './Box';
 import ArticleCardHeader from './ArticleCardHeader';
 import Button from './Button';
@@ -16,7 +16,8 @@ const Card = styled(Box, {
     border: '1px solid #4D4D4D',
     borderRadius: 8,
     padding: 5,
-    width: 389,
+    maxWidth: 389,
+    // flexGrow: 1,
     position: 'relative'
 });
 

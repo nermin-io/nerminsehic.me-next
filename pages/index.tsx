@@ -53,7 +53,6 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   const posts = await client.getAllByType("post");
   const filteredPosts = posts.sort(sortByMostRecent).slice(0, 3);
-  console.log(filteredPosts);
 
   return {
     props: {

@@ -2,7 +2,7 @@ import React from "react";
 import { PrismicRichText } from "@prismicio/react";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
-import { styled } from "@stitches/react";
+import { styled } from '../../stitches';
 
 export type HeroHeaderProps = SliceComponentProps<Content.HeroHeaderSlice>;
 
@@ -13,6 +13,14 @@ const Header = styled("header", {
   flexDirection: "column",
   justifyContent: "center",
   borderBottom: "1px solid #242424",
+  '@large': {
+    '& h1': {
+      fontSize: '3.5rem'
+    },
+    '& h4': {
+      fontSize: '1.4rem'
+    }
+  }
 });
 
 const HeroHeader: React.FC<HeroHeaderProps> = ({ slice }) => {

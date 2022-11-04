@@ -1,10 +1,13 @@
-import { styled } from '@stitches/react';
+import { styled } from '../../stitches';
 import Box from '../Box';
 
 const Container = styled(Box, {
     width: 1195,
-    padding: '0 20p',
-    margin: '0 auto'
+    margin: '0 auto',
+    '@large': {
+        width: '100%',
+        padding: '0 20px'
+    }
 });
 
 export default Container;

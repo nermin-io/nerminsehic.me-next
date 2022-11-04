@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
-import { styled } from "@stitches/react";
+import { styled } from '../../stitches';
 import { Simplify } from "../../.slicemachine/prismicio";
 import { useRouter } from 'next/router';
 import Box from "../../components/Box";

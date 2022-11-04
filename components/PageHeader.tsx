@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '@stitches/react';
+import { styled } from '../stitches';
 
 interface Props {
     title: string;
@@ -16,7 +16,11 @@ const Header = styled('header', {
         fontSize: 50,
         width: 700,
         fontWeight: 500,
-        textAlign: 'center'
+        textAlign: 'center',
+        '@large': {
+            width: '100%',
+            fontSize: 40
+        }
     }
 });
 

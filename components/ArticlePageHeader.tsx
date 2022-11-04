@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '@stitches/react';
+import { styled } from '../stitches';
 import type { Content } from '@prismicio/client';
 import Box from './Box';
 import _ from 'lodash';
@@ -21,7 +21,11 @@ const ArticleHeader = styled("header", {
         fontSize: 50,
         width: 700,
         fontWeight: 500,
-        textAlign: 'center'
+        textAlign: 'center',
+        '@large': {
+            fontSize: 40,
+            width: '100%'
+        }
     }
 });
 

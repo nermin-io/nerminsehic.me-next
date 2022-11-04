@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Content } from '@prismicio/client';
-import { styled } from '@stitches/react';
+import { styled } from '../stitches';
 import { PrismicRichText } from '@prismicio/react';
 import FormattedCode from './FormattedCode';
 
@@ -21,6 +21,14 @@ const Article = styled('main', {
     },
     '& h1, h2, h3, h4, h5, h6': {
         fontWeight: 500
+    },
+
+    '@medium': {
+      padding: '40px 80px',
+      textAlign: 'center'
+    },
+    '@small': {
+      padding: '40px 20px'
     }
 });
 

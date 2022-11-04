@@ -1,5 +1,4 @@
 import React from 'react';
-import { styled } from '@stitches/react';
 import { Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import { nord } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 

@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react';
+import { styled } from '../stitches';
 
 const Button = styled('button', {
     all: 'unset',
