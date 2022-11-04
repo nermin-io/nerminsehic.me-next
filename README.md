@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# nerminsehic.dev Blog
 
-## Getting Started
+The source code for my personal blog. You can check out the blog [here](https://nerminsehic.dev).
 
-First, run the development server:
+## Motivation
+In my career as a software developer, I am constantly learning new concepts and strategies. I wanted to have a site where I could host small articles about the things I learn that I could refer back to in the future or share with my colleagues.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Creating this site also allows me to tell others who I am and allows me to share important links. I attend a few meetups and conferences in Melbourne and I want to share my site with others to that they can see what I am working on.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies
+I have decided to build this site using Next.js and Typescript. On top of that I am using [Stitches](https://stitches.dev/) for styling (CSS-in-JS) and [Prismic](https://prismic.io/) as my CMS of choice.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+I have used this tech stack in the passed and I personally think the developer experience is unmatched. If you're wondering why I like Prismic, check out this article on [Slice Machine](https://prismic.io/blog/slice-machine-empowers-developers).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+If you stumble across my site and notice a bug or problem, you're more than welcome to create an issue here. I don't have any hard requirements for issues, just let me know how I can replicate the bug.
