@@ -1,6 +1,6 @@
-# nerminsehic.dev Blog
+# nerminsehic.me Blog
 
-The source code for my personal blog. You can check out the blog [here](https://nerminsehic.dev).
+The source code for my personal blog. You can check out the blog [here](https://nerminsehic.me).
 
 ## Motivation
 In my career as a software developer, I am constantly learning new concepts and strategies. I wanted to have a site where I could host small articles about the things I learn that I could refer back to in the future or share with my colleagues.
