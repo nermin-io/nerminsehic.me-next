@@ -1,4 +1,4 @@
-import { styled } from '../stitches';
+import { styled } from '../stitches.config';
 
 const Section = styled('section', {
     padding: '20px 0',

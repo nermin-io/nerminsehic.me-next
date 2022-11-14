@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Content } from '@prismicio/client';
-import { styled } from '../stitches';
+import { styled } from '../stitches.config';
 import { PrismicRichText } from '@prismicio/react';
 import FormattedCode from './FormattedCode';
 

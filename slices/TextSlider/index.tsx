@@ -1,7 +1,7 @@
 import React from "react";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
-import { styled } from '../../stitches';
+import { styled } from '../../stitches.config';
 import Box from "../../components/Box";
 
 export type TextSliderProps = SliceComponentProps<Content.TextSliderSlice>;

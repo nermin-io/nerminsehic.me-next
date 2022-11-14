@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '../stitches';
+import { styled } from '../stitches.config';
 
 interface Props {
     title: string;

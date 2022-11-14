@@ -1,4 +1,4 @@
-import { styled } from '../stitches';
+import { styled } from '../stitches.config';
 import Box from './Box';
 
 const ArticleList = styled(Box, {

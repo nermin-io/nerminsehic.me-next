@@ -1,7 +1,7 @@
 import React from "react";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
-import { styled } from '../../stitches';
+import { styled } from '../../stitches.config';
 import GithubIcon from "../../components/icons/GithubIcon";
 import LinkedinIcon from "../../components/icons/LinkedinIcon";
 import TwitterIcon from "../../components/icons/TwitterIcon";

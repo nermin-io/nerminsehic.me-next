@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '../stitches';
+import { styled } from '../stitches.config';
 import type { Content } from '@prismicio/client';
 import Box from './Box';
 import _ from 'lodash';

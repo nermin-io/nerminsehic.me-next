@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '../../stitches';
+import { styled } from '../../stitches.config';
 import Box from '../Box';
 import { FooterDocument } from '../../.slicemachine/prismicio';
 import { PrismicRichText } from "@prismicio/react";
