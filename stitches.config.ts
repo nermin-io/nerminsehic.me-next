@@ -1,6 +1,6 @@
 import { createStitches } from '@stitches/react';
 
-export const { styled, css, getCssText } = createStitches({
+export const { styled, css, getCssText, globalCss } = createStitches({
     media: {
         large: '(max-width: 1195px)',
         medium: '(max-width: 800px)',

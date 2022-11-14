@@ -1,4 +1,3 @@
-import '../styles/globals.css';
 import type { AppProps as NextAppProps } from "next/app";
 import Link from 'next/link';
 import { PrismicProvider } from '@prismicio/react';

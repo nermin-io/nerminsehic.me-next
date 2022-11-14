@@ -8,7 +8,6 @@ export type HeroHeaderProps = SliceComponentProps<Content.HeroHeaderSlice>;
 
 const Header = styled("header", {
   height: 300,
-  fontFamily: "Space Grotesk, Inter, sans-serif",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -25,7 +24,7 @@ const Header = styled("header", {
 
 const HeroHeader: React.FC<HeroHeaderProps> = ({ slice }) => {
   return (
-    <Header>
+    <Header className="sg">
       <PrismicRichText field={slice.primary.title} />
       <PrismicRichText field={slice.primary.description} />
     </Header>

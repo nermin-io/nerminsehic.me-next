@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Box from "../Box";
 import Footer from "./Footer";
 import { FooterDocument, NavigationDocument } from "../../.slicemachine/prismicio";
+import { globalStyles } from '../../common/global';
 
 interface Props {
   children: React.ReactNode | React.ReactNode[];
@@ -25,6 +26,7 @@ const FullHeight = styled(Box, {
 });
 
 const Layout: React.FC<Props> = ({ children, navData, footerData }) => {
+  globalStyles();
   return (
     <FullHeight>
       <Container>
