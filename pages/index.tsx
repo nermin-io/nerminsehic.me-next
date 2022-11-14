@@ -1,7 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import DocumentHead from '../components/layout/DocumentHead';
 import { createClient } from '../prismicio';
-import { styled } from '@stitches/react';
+import { styled } from '../stitches.config';
 import { components } from '../slices';
 import { SliceZone} from '@prismicio/react';
 import type { Content } from '@prismicio/client';
