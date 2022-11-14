@@ -43,8 +43,8 @@ const richTextComponents: JSXMapSerializer = {
 function BlogApplication({ Component, pageProps }: AppProps<PageProps>) {
   return (
     <PrismicProvider richTextComponents={richTextComponents} internalLinkComponent={({ href, ...props}) => (
-      <Link href={href}>
-        <a {...props} />
+      <Link href={href} {...props}>
+        
       </Link>
     )}>
       <PrismicPreview repositoryName={repositoryName}>

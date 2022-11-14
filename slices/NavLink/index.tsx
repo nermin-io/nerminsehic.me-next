@@ -83,7 +83,7 @@ const NavLink: React.FC<NavLinkProps> = ({ slice }) => {
               onMouseLeave={() => setNavIndex(getCurrentPageIdx(slice, routePath))}
             >
               <Link href={item.path || '/'}>
-                <a>{item.label}</a>
+                {item.label}
               </Link>
             </NavItem>
           );

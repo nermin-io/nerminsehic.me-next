@@ -53,9 +53,7 @@ const ArticleCard: React.FC<Props> = ({ post }) => {
       </CardContent>
       <CardContent css={{ paddingBottom: 5 }}>
         <Link href={`${post.url}`}>
-          <a>
-            <Button>Read Now</Button>
-          </a>
+          <Button>Read Now</Button>
         </Link>
       </CardContent>
     </Card>
