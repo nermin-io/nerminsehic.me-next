@@ -10,7 +10,7 @@ Creating this site also allows me to tell others who I am and allows me to share
 ## Technologies
 I have decided to build this site using Next.js and Typescript. On top of that I am using [Stitches](https://stitches.dev/) for styling (CSS-in-JS) and [Prismic](https://prismic.io/) as my CMS of choice.
 
-I have used this tech stack in the passed and I personally think the developer experience is unmatched. If you're wondering why I like Prismic, check out this article on [Slice Machine](https://prismic.io/blog/slice-machine-empowers-developers).
+I have used this tech stack in the past and I personally think the developer experience is unmatched. If you're wondering why I like Prismic, check out this article on [Slice Machine](https://prismic.io/blog/slice-machine-empowers-developers).
 
 ## Contributing
 If you stumble across my site and notice a bug or problem, you're more than welcome to create an issue here. I don't have any hard requirements for issues, just let me know how I can replicate the bug.
