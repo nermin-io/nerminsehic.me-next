@@ -11,7 +11,7 @@ import Box from '../components/Box';
 import dayjs from 'dayjs';
 
 interface PageProps {
-  page: Content.HomepageDocument<string>; 
+  page: Content.HomepageDocument<string>;
   posts: Content.PostDocument<string>[];
 }
 
@@ -29,7 +29,7 @@ const Home: NextPage<PageProps> = ({ page, posts }) => {
       <SliceZone slices={page.data.slices} components={components} />
       <Spacer>
         <h5>Today I Learned</h5>
-        <p style={{fontSize: 16}}>A blog about my learning on software engineering topics.</p>
+        <p style={{fontSize: 16}}>A blog on software engineering topics</p>
         <ArticleList>
           {posts.map((post) => (
             <ArticleCard post={post} key={post.id} />
