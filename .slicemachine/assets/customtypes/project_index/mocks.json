@@ -1,7 +1,17 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "length",
+    "value": "around",
+    "type": "Text"
+  },
+  "document_title": {
+    "__TYPE__": "FieldContent",
+    "value": "mine",
+    "type": "Text"
+  },
+  "document_description": {
+    "__TYPE__": "FieldContent",
+    "value": "advice",
     "type": "Text"
   }
 }

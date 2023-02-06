@@ -248,6 +248,28 @@ interface ProjectIndexDocumentData {
      *
      */
     title: prismicT.KeyTextField;
+    /**
+     * Document Title field in *Project Index*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project_index.document_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    document_title: prismicT.KeyTextField;
+    /**
+     * Document Description field in *Project Index*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project_index.document_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    document_description: prismicT.KeyTextField;
 }
 /**
  * Project Index document from Prismic

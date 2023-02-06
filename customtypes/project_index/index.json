@@ -12,6 +12,22 @@
           "placeholder": ""
         }
       }
+    },
+    "SEO": {
+      "document_title": {
+        "type": "Text",
+        "config": {
+          "label": "Document Title",
+          "placeholder": ""
+        }
+      },
+      "document_description": {
+        "type": "Text",
+        "config": {
+          "label": "Document Description",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

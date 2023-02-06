@@ -12,6 +12,10 @@ const routes = [
     {
         type: 'post',
         path: '/posts/:uid'
+    },
+    {
+        type: 'project',
+        path: '/projects/:uid'
     }
 ];
 
