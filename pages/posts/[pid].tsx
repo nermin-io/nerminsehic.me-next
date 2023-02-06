@@ -12,7 +12,7 @@ const PostPage: NextPage<PageProps> = ({ post }) => {
         <div>
             <DocumentHead title={`${post.data.title} :: Nermin Sehic`} description={post.data.snippet } />
             <ArticlePageHeader post={post as Content.PostDocument} />
-            <ArticleBody post={post as Content.PostDocument} />
+            <ArticleBody document={post as Content.PostDocument} />
         </div>
     );
 }

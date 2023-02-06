@@ -12,7 +12,7 @@ const ProjectPage: NextPage<PageProps> = ({ project }) => {
         <div>
             <DocumentHead title={`${project.data.title} :: Nermin Sehic`} description={project.data.snippet } />
             <ProjectPageHeader project={project as Content.ProjectDocument} />
-            {/*<ArticleBody post={project as Content.ProjectDocument} />*/}
+            <ArticleBody document={project as Content.ProjectDocument} />
         </div>
     );
 }

@@ -2,10 +2,9 @@ import React from 'react';
 import type { Content } from '@prismicio/client';
 import { styled } from '../stitches.config';
 import { PrismicRichText } from '@prismicio/react';
-import FormattedCode from './FormattedCode';
 
 interface Props {
-    post: Content.PostDocument
+    document: Content.PostDocument | Content.ProjectDocument;
 }
 
 const Article = styled('main', {
@@ -32,10 +31,10 @@ const Article = styled('main', {
     }
 });
 
-const ArticleBody: React.FC<Props> = ({ post }) => {
+const ArticleBody: React.FC<Props> = ({ document }) => {
   return (
     <Article>
-      <PrismicRichText field={post.data.body} />
+      <PrismicRichText field={document.data.body} />
     </Article>
   );
 };
