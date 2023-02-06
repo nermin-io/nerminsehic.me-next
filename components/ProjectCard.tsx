@@ -7,37 +7,13 @@ import {PrismicRichText} from '@prismicio/react';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import ProjectCardImage from "./ProjectCardImage";
+import CardContent from "./CardContent";
+import DateTag from "./DateTag";
+import Card from "./Card";
 
 interface Props {
   project: Content.ProjectDocument;
 }
-
-const Card = styled(Box, {
-  border: '1px solid #4D4D4D',
-  borderRadius: 8,
-  padding: 5,
-  maxWidth: 389,
-  position: 'relative',
-  '@extrasmall': {
-    maxWidth: '100%'
-  }
-});
-
-const CardContent = styled(Box, {
-  padding: '0px 15px',
-  display: 'flex',
-  flexDirection: 'column',
-});
-
-const DateTag = styled(Box, {
-  position: 'absolute',
-  top: 15,
-  right: 15,
-  backgroundColor: '#FFFFFF16',
-  padding: '6px 12px',
-  borderRadius: '50px',
-  fontSize: 12
-});
 
 const ProjectCard: React.FC<Props> = ({project}) => {
   return (
