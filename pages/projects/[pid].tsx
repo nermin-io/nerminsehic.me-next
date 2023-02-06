@@ -2,27 +2,27 @@ import type { GetStaticProps, GetStaticPaths, NextPage, InferGetStaticPropsType 
 import { createClient } from '../../prismicio';
 import DocumentHead from '../../components/layout/DocumentHead';
 import type { Content } from '@prismicio/client';
-import ArticlePageHeader from '../../components/ArticlePageHeader';
 import ArticleBody from '../../components/ArticleBody';
+import ProjectPageHeader from "../../components/ProjectPageHeader";
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
-const PostPage: NextPage<PageProps> = ({ post }) => {
+const ProjectPage: NextPage<PageProps> = ({ project }) => {
     return (
         <div>
-            <DocumentHead title={`${post.data.title} :: Nermin Sehic`} description={post.data.snippet } />
-            <ArticlePageHeader post={post as Content.PostDocument} />
-            <ArticleBody post={post as Content.PostDocument} />
+            <DocumentHead title={`${project.data.title} :: Nermin Sehic`} description={project.data.snippet } />
+            <ProjectPageHeader project={project as Content.ProjectDocument} />
+            {/*<ArticleBody post={project as Content.ProjectDocument} />*/}
         </div>
     );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const client = createClient();
-  const posts = await client.getAllByType("post");
+  const projects = await client.getAllByType("project");
 
   return {
-    paths: posts.map(post => ({ params: { pid: post.uid }})),
+    paths: projects.map(project => ({ params: { pid: project.uid }})),
     fallback: false
   };
 };
@@ -37,11 +37,11 @@ export const getStaticProps: GetStaticProps = async({ previewData, params }) => 
     const client = createClient({ previewData });
     const navigation = await client.getSingle('navigation');
     const footer = await client.getSingle('footer');
-    const post = await client.getByUID('post', pid as string); 
+    const project = await client.getByUID('project', pid as string);
 
     return {
         props: {
-            post,
+            project,
             global: {
                 navigation,
                 footer
@@ -50,4 +50,4 @@ export const getStaticProps: GetStaticProps = async({ previewData, params }) => 
     };
 }
 
-export default PostPage;
+export default ProjectPage;

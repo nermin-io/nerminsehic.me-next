@@ -338,6 +338,17 @@ interface ProjectDocumentData {
      *
      */
     body: prismicT.RichTextField;
+    /**
+     * Site field in *Project*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.site
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    site: prismicT.LinkField;
 }
 /**
  * Project document from Prismic
