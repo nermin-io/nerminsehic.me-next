@@ -1,16 +1,73 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "navigation",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "slices": []
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "nav_link$45559f39-fa8c-4e15-bb5c-a7cec6ad7cad",
+        "name": "nav_link",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "label",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "damage",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "path",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "protection",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "social_link$9adb5dce-e1fe-490c-862a-0fa430928ee1",
+        "name": "social_link",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "type",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "github",
+                    "type": "Select"
+                  }
+                ],
+                [
+                  "path",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://prismic.io"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }

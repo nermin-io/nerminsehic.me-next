@@ -235,7 +235,99 @@ interface PostDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PostIndexDocument | PostDocument;
+/** Content for Project Index documents */
+interface ProjectIndexDocumentData {
+    /**
+     * Title field in *Project Index*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project_index.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Project Index document from Prismic
+ *
+ * - **API ID**: `project_index`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProjectIndexDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ProjectIndexDocumentData>, "project_index", Lang>;
+/** Content for Project documents */
+interface ProjectDocumentData {
+    /**
+     * Image field in *Project*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *Project*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Snippet field in *Project*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.snippet
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    snippet: prismicT.RichTextField;
+    /**
+     * Published At field in *Project*
+     *
+     * - **Field Type**: Timestamp
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.published_at
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+     *
+     */
+    published_at: prismicT.TimestampField;
+    /**
+     * Body field in *Project*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.body
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    body: prismicT.RichTextField;
+}
+/**
+ * Project document from Prismic
+ *
+ * - **API ID**: `project`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProjectDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ProjectDocumentData>, "project", Lang>;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PostIndexDocument | PostDocument | ProjectIndexDocument | ProjectDocument;
 /**
  * Primary content in FreeTextSection → Primary
  *
@@ -476,6 +568,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PostIndexDocumentData, PostIndexDocument, PostDocumentData, PostDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
+        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PostIndexDocumentData, PostIndexDocument, PostDocumentData, PostDocument, ProjectIndexDocumentData, ProjectIndexDocument, ProjectDocumentData, ProjectDocument, AllDocumentTypes, FreeTextSectionSliceDefaultPrimary, FreeTextSectionSliceDefault, FreeTextSectionSliceVariation, FreeTextSectionSlice, HeroHeaderSliceDefaultPrimary, HeroHeaderSliceDefault, HeroHeaderSliceVariation, HeroHeaderSlice, NavLinkSliceDefaultItem, NavLinkSliceDefault, NavLinkSliceVariation, NavLinkSlice, SocialLinkSliceDefaultItem, SocialLinkSliceDefault, SocialLinkSliceVariation, SocialLinkSlice, TextSliderSliceDefaultItem, TextSliderSliceDefault, TextSliderSliceVariation, TextSliderSlice };
     }
 }

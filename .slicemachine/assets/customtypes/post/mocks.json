@@ -1,31 +1,42 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "post",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "type": "typescript",
-    "title": "sent",
-    "snippet": [
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "grass"
+  },
+  "type": {
+    "__TYPE__": "FieldContent",
+    "value": "java",
+    "type": "Select"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "dust",
+    "type": "Text"
+  },
+  "snippet": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Magna aute deserunt veniam duis eiusmod do ut veniam et amet sint proident proident laborum nulla. Reprehenderit magna qui incididunt elit anim velit mollit.",
-        "spans": []
+        "content": {
+          "text": "Est commodo mollit officia. Commodo dolor quis eiusmod qui incididunt exercitation amet reprehenderit consectetur dolor duis consectetur et."
+        }
       }
-    ],
-    "published_at": "2021-01-29",
-    "body": [
+    ]
+  },
+  "published_at": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2015-04-26"
+  },
+  "body": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Ea duis dolore labore tempor ea in minim sunt commodo exercitation commodo esse anim sunt.",
-        "spans": []
+        "content": {
+          "text": "Eu reprehenderit minim elit laboris eiusmod amet. Aute eu proident excepteur proident sit irure laboris tempor dolore qui fugiat et est aliquip. Voluptate consequat duis irure dolore ut ipsum culpa ex."
+        }
       }
     ]
   }

@@ -1,18 +1,117 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "homepage",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "title": "vertical",
-    "description": "repeat",
-    "slices": []
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "pine",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "thought",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_header$3aa1a55c-eb60-4cb7-b7f6-bf6f17e0b98d",
+        "name": "hero_header",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Final"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading4",
+                  "content": {
+                    "text": "Coming"
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "free_text_section$bd887a3f-8ab7-4dd1-b605-1be8e2085e94",
+        "name": "free_text_section",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading5",
+                  "content": {
+                    "text": "Sugar"
+                  }
+                }
+              ]
+            },
+            "body": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Labore do nulla consequat eiusmod cillum ex consectetur. Ad ipsum officia esse magna culpa anim quis sunt ad veniam ad ipsum."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "text_slider$3c59e250-d2c5-4477-b1ca-40f1685e6b4e",
+        "name": "text_slider",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "text",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "act",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }

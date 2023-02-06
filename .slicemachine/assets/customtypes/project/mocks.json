@@ -1,0 +1,59 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "friendly"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+      "width": 3168,
+      "height": 4752
+    },
+    "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+    "width": 3168,
+    "height": 4752,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "roar",
+    "type": "Text"
+  },
+  "snippet": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Consequat sunt sint culpa enim irure incididunt ipsum."
+        }
+      }
+    ]
+  },
+  "published_at": {
+    "__TYPE__": "FieldContent",
+    "type": "Timestamp",
+    "value": "2019-04-26T06:18:30Z"
+  },
+  "body": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Amet minim enim anim ipsum esse est mollit minim. Tempor esse id irure magna ex occaecat eu ad occaecat fugiat sit aliquip proident."
+        }
+      }
+    ]
+  }
+}

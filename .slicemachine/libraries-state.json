@@ -75,7 +75,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/FreeTextSection/default/preview.png",
+            "path": "/Users/nerminsehic/dev-workspace/frontend/nerminsehic.dev/.slicemachine/assets/slices/FreeTextSection/default/preview.png",
             "width": 800,
             "height": 600
           }
@@ -155,7 +155,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/HeroHeader/default/preview.png",
+            "path": "/Users/nerminsehic/dev-workspace/frontend/nerminsehic.dev/.slicemachine/assets/slices/HeroHeader/default/preview.png",
             "width": 800,
             "height": 600
           }
@@ -219,7 +219,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/NavLink/default/preview.png",
+            "path": "/Users/nerminsehic/dev-workspace/frontend/nerminsehic.dev/.slicemachine/assets/slices/NavLink/default/preview.png",
             "width": 1280,
             "height": 800
           }
@@ -292,7 +292,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/SocialLink/default/preview.png",
+            "path": "/Users/nerminsehic/dev-workspace/frontend/nerminsehic.dev/.slicemachine/assets/slices/SocialLink/default/preview.png",
             "width": 390,
             "height": 844
           }
@@ -348,7 +348,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/nerminsehic/dev-playground/frontend/nerminsehic.dev/.slicemachine/assets/slices/TextSlider/default/preview.png",
+            "path": "/Users/nerminsehic/dev-workspace/frontend/nerminsehic.dev/.slicemachine/assets/slices/TextSlider/default/preview.png",
             "width": 1280,
             "height": 800
           }

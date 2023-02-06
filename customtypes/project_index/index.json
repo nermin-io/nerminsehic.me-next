@@ -1,0 +1,17 @@
+{
+  "id": "project_index",
+  "label": "Project Index",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

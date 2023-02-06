@@ -30,7 +30,9 @@
         }
       }
     },
-    "post_index": {}
+    "post_index": {},
+    "project_index": {},
+    "project": {}
   },
   "slices": {
     "HeroHeader": {
