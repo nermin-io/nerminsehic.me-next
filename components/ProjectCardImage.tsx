@@ -23,7 +23,17 @@ const ProjectCardImage: React.FC<Props> = ({image}) => {
   return (
     <CardHeader>
       {image.url && (
-        <Image src={image.url} alt={image.alt || 'Project Image'} width={378} height={145} style={{borderRadius: 3}} />
+        <Box
+          css={{
+            width: '100%',
+            borderRadius: 3,
+            overflow: 'hidden',
+            display: 'flex',
+            justifyContent: 'center'
+          }}
+        >
+          <Image src={image.url} alt={image.alt || 'Project Image'} width={380} height={145} style={{borderRadius: 3}}/>
+        </Box>
       )}
     </CardHeader>
   );

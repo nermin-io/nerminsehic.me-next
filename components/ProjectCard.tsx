@@ -17,8 +17,10 @@ const Card = styled(Box, {
   borderRadius: 8,
   padding: 5,
   maxWidth: 389,
-  // flexGrow: 1,
-  position: 'relative'
+  position: 'relative',
+  '@extrasmall': {
+    maxWidth: '100%'
+  }
 });
 
 const CardContent = styled(Box, {
