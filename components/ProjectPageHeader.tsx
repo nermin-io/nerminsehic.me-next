@@ -6,6 +6,7 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import {isFilled} from "@prismicio/helpers";
 import Header from "./Header";
+import HighlightedText from "./HighlightedText";
 
 interface Props {
     project: Content.ProjectDocument
@@ -14,10 +15,6 @@ interface Props {
 const ArticleMeta = styled(Box, {
     fontSize: 16
 });
-
-const HighlightedText = styled('span', {
-    color: '#DFF962'
-})
 
 const ProjectPageHeader: React.FC<Props> = ({ project }) => {
     return (

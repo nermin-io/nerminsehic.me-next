@@ -5,6 +5,7 @@ import Box from './Box';
 import _ from 'lodash';
 import dayjs from 'dayjs';
 import Header from "./Header";
+import HighlightedText from "./HighlightedText";
 
 interface Props {
     post: Content.PostDocument 
@@ -14,9 +15,6 @@ const ArticleMeta = styled(Box, {
     fontSize: 16
 });
 
-const HighlightedText = styled('span', {
-    color: '#DFF962'
-})
 
 const ArticlePageHeader: React.FC<Props> = ({ post }) => {
     return (
