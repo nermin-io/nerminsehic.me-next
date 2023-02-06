@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async({ previewData, params }) => 
     const client = createClient({ previewData });
     const navigation = await client.getSingle('navigation');
     const footer = await client.getSingle('footer');
-    const project = await client.getByUID('project', pid as string);
+    const project = await client.getByUID('project', `${pid}`);
 
     return {
         props: {
