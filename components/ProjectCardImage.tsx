@@ -23,7 +23,7 @@ const ProjectCardImage: React.FC<Props> = ({image}) => {
   return (
     <CardHeader>
       {image.url && (
-        <Image src={image.url} alt={image.alt || 'Project Image'} width={380} height={145} />
+        <Image src={image.url} alt={image.alt || 'Project Image'} width={378} height={145} style={{borderRadius: 3}} />
       )}
     </CardHeader>
   );
