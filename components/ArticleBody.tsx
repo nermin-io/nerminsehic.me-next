@@ -22,6 +22,10 @@ const Article = styled('main', {
         fontWeight: 500
     },
 
+    'img': {
+      width: '100%'
+    },
+
     '@medium': {
       padding: '40px 80px',
       textAlign: 'center'
