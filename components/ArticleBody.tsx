@@ -16,7 +16,7 @@ const Article = styled('main', {
     },
     '& p': {
         fontSize: 16,
-        marginBottom: 40
+        marginBottom: 10
     },
     '& h1, h2, h3, h4, h5, h6': {
         fontWeight: 500
