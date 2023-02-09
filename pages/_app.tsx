@@ -1,4 +1,4 @@
-import type { AppProps as NextAppProps } from "next/app";
+import type { AppProps as NextAppProps } from 'next/app';
 import Link from 'next/link';
 import { PrismicProvider } from '@prismicio/react';
 import { PrismicPreview } from '@prismicio/next';
@@ -7,26 +7,27 @@ import Layout from '../components/layout/Layout';
 import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
 import FormattedCode from '../components/FormattedCode';
 import type { JSXMapSerializer } from '@prismicio/react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const determineLanguage = (text: string | undefined) => {
   const fallbackLanguage = 'plaintext';
 
-  if(!text) return [fallbackLanguage, ''];
-  if(!text.startsWith('//')) return [fallbackLanguage, text];
+  if (!text) return [fallbackLanguage, ''];
+  if (!text.startsWith('//')) return [fallbackLanguage, text];
 
-  const [firstLine, ...lines ] = text.split('\n');
-  const language = firstLine.replace('//','').trim();
+  const [firstLine, ...lines] = text.split('\n');
+  const language = firstLine.replace('//', '').trim();
   return [language, lines.join('\n')];
-}
+};
 
 type AppProps<P = any> = {
   pageProps: P;
-} & Omit<NextAppProps<P>, "pageProps">;
+} & Omit<NextAppProps<P>, 'pageProps'>;
 
 type Global = {
   navigation: NavigationDocument<string>;
   footer: FooterDocument<string>;
-}
+};
 
 interface PageProps {
   global: Global;
@@ -40,20 +41,26 @@ const richTextComponents: JSXMapSerializer = {
 };
 
 function BlogApplication({ Component, pageProps }: AppProps<PageProps>) {
+  const queryClient = new QueryClient();
   return (
-    <PrismicProvider richTextComponents={richTextComponents} internalLinkComponent={({ href, ...props}) => (
-      <Link href={href} {...props}>
-        
-      </Link>
-    )}>
+    <PrismicProvider
+      richTextComponents={richTextComponents}
+      internalLinkComponent={({ href, ...props }) => (
+        <Link href={href} {...props}></Link>
+      )}
+    >
       <PrismicPreview repositoryName={repositoryName}>
-        <Layout navData={pageProps?.global?.navigation} footerData={pageProps?.global?.footer}>
-          <Component {...pageProps} />
-        </Layout>
+        <QueryClientProvider client={queryClient}>
+          <Layout
+            navData={pageProps?.global?.navigation}
+            footerData={pageProps?.global?.footer}
+          >
+            <Component {...pageProps} />
+          </Layout>
+        </QueryClientProvider>
       </PrismicPreview>
     </PrismicProvider>
   );
 }
-
 
 export default BlogApplication;
