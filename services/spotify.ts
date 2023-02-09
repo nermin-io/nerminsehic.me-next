@@ -5,7 +5,7 @@ import qs from 'qs';
 let sessionExpiresAt: Date;
 let accessToken: string;
 
-const useSpotifyClient = () => {
+const createSpotifyClient = () => {
   const client = axios.create({
     baseURL: `${process.env.SPOTIFY_BASE_URL}/v1`,
     timeout: 10000,
@@ -57,4 +57,4 @@ const useSpotifyClient = () => {
   return client;
 };
 
-export default useSpotifyClient;
+export default createSpotifyClient;
