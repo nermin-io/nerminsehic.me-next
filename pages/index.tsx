@@ -9,6 +9,7 @@ import ArticleList from '../components/ArticleList';
 import ArticleCard from '../components/ArticleCard';
 import Box from '../components/Box';
 import dayjs from 'dayjs';
+import SpotifyCurrentlyPlaying from '../containers/SpotifyCurrentlyPlaying';
 
 interface PageProps {
   page: Content.HomepageDocument<string>;
