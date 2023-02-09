@@ -14,13 +14,29 @@ const Flex = styled(Box, {
 });
 
 const SongContainer = styled(Box, {
-  fontSize: 15,
-  fontWeight: 450,
+  fontSize: 14,
+  display: 'flex',
+  flexDirection: 'column'
+});
+
+const Song = styled(Box, {
+  fontWeight: 500
+});
+
+const Artists = styled(Box, {
+  color: '#6b7280'
 });
 
 const SpotifySubtext = styled(Box, {
-  fontSize: 15,
+  fontSize: 14,
+  fontWeight: 400,
   color: '#6b7280',
+});
+
+const Message = styled(Box, {
+  fontWeight: 500,
+  display: 'flex',
+  gap: 5
 });
 
 const SpotifyCurrentlyPlaying: React.FC<Props> = () => {
@@ -29,18 +45,23 @@ const SpotifyCurrentlyPlaying: React.FC<Props> = () => {
     return response.data;
   });
 
-  const getCurrentTrack = () => {
-    if(isLoading) return 'Loading player...';
-    if(!track.playing) return 'Not Playing';
-    return `${track.name} - ${track.artists}`;
+  const renderCurrentTrack = () => {
+    if(isLoading) return <Message>Loading Player...</Message>
+    if(!track.playing) return <Message>Not Playing <SpotifySubtext>— Spotify</SpotifySubtext></Message>
+    return (
+      <SongContainer>
+        <Song>{track.name}</Song>
+        <Artists>{track.artists}</Artists>
+      </SongContainer>
+    );
   }
 
 
   return (
     <Flex>
-      <SpotifyIcon height={20} width={20} />
-      <SongContainer>{getCurrentTrack()}</SongContainer>
-      <SpotifySubtext>— Spotify</SpotifySubtext>
+      <SpotifyIcon height={30} width={30} />
+      { renderCurrentTrack() }
+      {/* <SpotifySubtext>— Spotify</SpotifySubtext> */}
     </Flex>
   );
 };
