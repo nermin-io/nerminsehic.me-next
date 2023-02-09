@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import useSpotifyClient from '../../services/spotify';
+import createSpotifyClient from '../../services/spotify';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const client = useSpotifyClient();
+  const client = createSpotifyClient();
   const { data, status } = await client.get(
     '/me/player/currently-playing?market=AU'
   );
