@@ -10,7 +10,7 @@ export default async function handler(
     '/me/player/currently-playing?market=AU'
   );
 
-  if (status === 204) return res.json({ playing: false });
+  if (status === 204 || status >= 400) return res.json({ playing: false });
 
   return res.json({
     playing: data.is_playing,
