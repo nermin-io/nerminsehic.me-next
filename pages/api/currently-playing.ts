@@ -1,6 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import createSpotifyClient from '../../services/spotify';
 
+const constructArtistNames = (artists: Array<any>) => {
+  return artists.map(artist => artist.name).join(', ');
+}
+
+const findImageUrlByDimensions = (images: Array<any>, dimensions: number) => {
+  return images.find(image => image.height === dimensions && image.width === dimensions)?.url
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,8 +24,8 @@ export default async function handler(
     playing: data.is_playing,
     id: data.item.id,
     name: data.item.name,
-    artists: data.item.artists.map((artist: any) => artist.name).join(', '),
+    artists: constructArtistNames(data.item.artists),
     url: data.item.external_urls.spotify,
-    image_url: data.item.album.images.find((image: any) => image.height === 300 && image.width === 300)?.url
+    image_url: findImageUrlByDimensions(data.item.album.images, 300)
   });
 }
