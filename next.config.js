@@ -7,8 +7,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.prismic.io',
-        port: '*',
-        pathname: '/**',
+        pathname: '/nerminsehic-blog/**',
       },
     ],
   },
