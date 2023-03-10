@@ -1,5 +1,5 @@
 import { styled } from '../stitches.config';
-import Box from "./Box";
+import Box from './Box';
 
 const DateTag = styled(Box, {
   position: 'absolute',
@@ -8,7 +8,7 @@ const DateTag = styled(Box, {
   backgroundColor: '#FFFFFF16',
   padding: '6px 12px',
   borderRadius: '50px',
-  fontSize: 12
+  fontSize: 12,
 });
 
 export default DateTag;

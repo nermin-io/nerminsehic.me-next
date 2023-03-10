@@ -7,8 +7,8 @@ const ArticleList = styled(Box, {
   padding: '20px 0',
   flexWrap: 'wrap',
   '@large': {
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 });
 
 export default ArticleList;

@@ -1,10 +1,13 @@
-import React from "react";
+import React from 'react';
 import { styled } from '../../stitches.config';
-import Container from "./Container";
-import Navbar from "./Navbar";
-import Box from "../Box";
-import Footer from "./Footer";
-import { FooterDocument, NavigationDocument } from "../../.slicemachine/prismicio";
+import Container from './Container';
+import Navbar from './Navbar';
+import Box from '../Box';
+import Footer from './Footer';
+import {
+  FooterDocument,
+  NavigationDocument,
+} from '../../.slicemachine/prismicio';
 import { globalStyles } from '../../common/global';
 
 interface Props {
@@ -15,14 +18,14 @@ interface Props {
 
 const Content = styled(Box, {});
 const Spacer = styled(Box, {
-    height: 20
+  height: 20,
 });
 
 const FullHeight = styled(Box, {
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
 });
 
 const Layout: React.FC<Props> = ({ children, navData, footerData }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {styled} from '../stitches.config';
+import { styled } from '../stitches.config';
 import Box from './Box';
 import * as PrismicType from '@prismicio/types';
 import Image from 'next/image';
@@ -18,8 +18,7 @@ const CardHeader = styled(Box, {
   justifyContent: 'center',
 });
 
-const ProjectCardImage: React.FC<Props> = ({image}) => {
-
+const ProjectCardImage: React.FC<Props> = ({ image }) => {
   return (
     <CardHeader>
       {image.url && (
@@ -29,14 +28,20 @@ const ProjectCardImage: React.FC<Props> = ({image}) => {
             borderRadius: 3,
             overflow: 'hidden',
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
           }}
         >
-          <Image src={image.url} alt={image.alt || 'Project Image'} width={380} height={145} style={{borderRadius: 3}}/>
+          <Image
+            src={image.url}
+            alt={image.alt || 'Project Image'}
+            width={380}
+            height={145}
+            style={{ borderRadius: 3 }}
+          />
         </Box>
       )}
     </CardHeader>
   );
-}
+};
 
 export default ProjectCardImage;

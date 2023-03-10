@@ -4,52 +4,74 @@ import { styled } from '../stitches.config';
 type HeadingType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 interface Props {
-    as: HeadingType;
-    weight?: number;
-    children: React.ReactNode | React.ReactNode[];
-    lineHeight?: number;
+  as: HeadingType;
+  weight?: number;
+  children: React.ReactNode | React.ReactNode[];
+  lineHeight?: number;
 }
 
 const H1 = styled('h1', {
-    all: 'unset',
-    fontSize: '4.209rem'
+  all: 'unset',
+  fontSize: '4.209rem',
 });
 
 const H2 = styled('h2', {
-    all: 'unset',
-    fontSize: '3.157rem'
+  all: 'unset',
+  fontSize: '3.157rem',
 });
 
 const H3 = styled('h3', {
-    all: 'unset',
-    fontSize: '2.369rem'
+  all: 'unset',
+  fontSize: '2.369rem',
 });
 
 const H4 = styled('h4', {
-    all: 'unset',
-    fontSize: '1.666rem'
+  all: 'unset',
+  fontSize: '1.666rem',
 });
 
 const H5 = styled('h5', {
-    all: 'unset',
-    fontSize: '1.333rem'
+  all: 'unset',
+  fontSize: '1.333rem',
 });
 
 const H6 = styled('h6', {
-    all: 'unset',
-    fontSize: '1rem'
+  all: 'unset',
+  fontSize: '1rem',
 });
 
-const Heading: React.FC<Props> = ({ as, children, weight = 500, lineHeight = 1.3 }) => {
-    switch(as) {
-        case 'h1': return <H1 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H1>;
-        case 'h2': return <H2 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H2>;
-        case 'h3': return <H3 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H3>;
-        case 'h4': return <H4 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H4>;
-        case 'h5': return <H5 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H5>;
-        case 'h6': return <H6 css={{fontWeight: weight, lineHeight: lineHeight}}>{children}</H6>;
-    }
+const Heading: React.FC<Props> = ({
+  as,
+  children,
+  weight = 500,
+  lineHeight = 1.3,
+}) => {
+  switch (as) {
+    case 'h1':
+      return (
+        <H1 css={{ fontWeight: weight, lineHeight: lineHeight }}>{children}</H1>
+      );
+    case 'h2':
+      return (
+        <H2 css={{ fontWeight: weight, lineHeight: lineHeight }}>{children}</H2>
+      );
+    case 'h3':
+      return (
+        <H3 css={{ fontWeight: weight, lineHeight: lineHeight }}>{children}</H3>
+      );
+    case 'h4':
+      return (
+        <H4 css={{ fontWeight: weight, lineHeight: lineHeight }}>{children}</H4>
+      );
+    case 'h5':
+      return (
+        <H5 css={{ fontWeight: weight, lineHeight: lineHeight }}>{children}</H5>
+      );
+    case 'h6':
+      return (
+        <H6 css={{ fontWeight: weight, lineHeight: lineHeight }}>{children}</H6>
+      );
+  }
 };
 
 export default Heading;
-

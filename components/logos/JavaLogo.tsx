@@ -1,7 +1,7 @@
-import React from "react";
-import { LogoProps } from ".";
+import React from 'react';
+import { LogoProps } from '.';
 
-const JavaLogo: React.FC<LogoProps> = ({width = 64, height = 64}) => {
+const JavaLogo: React.FC<LogoProps> = ({ width = 64, height = 64 }) => {
   return (
     <svg
       width={width}

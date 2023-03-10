@@ -15,35 +15,38 @@ interface PageProps {
 const PostsIndex: NextPage<PageProps> = ({ posts, page }) => {
   return (
     <div>
-      <DocumentHead title={`${page.data.document_title} :: Nermin Sehic`} description={`${page.data.document_description}`}/>
+      <DocumentHead
+        title={`${page.data.document_title} :: Nermin Sehic`}
+        description={`${page.data.document_description}`}
+      />
       <PageHeader title={`${page.data.title}`} />
       <ArticleList>
-        { posts.results.map(post => (
-            <ArticleCard key={post.id} post={post} />
+        {posts.results.map((post) => (
+          <ArticleCard key={post.id} post={post} />
         ))}
       </ArticleList>
     </div>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
-    const client = createClient({ previewData });
-    const navigation = await client.getSingle('navigation');
-    const footer = await client.getSingle('footer');
+  const client = createClient({ previewData });
+  const navigation = await client.getSingle('navigation');
+  const footer = await client.getSingle('footer');
 
-    const posts = await client.getByType('post');
-    const page = await client.getSingle('post_index');
-  
-    return {
-      props: {
-        global: {
-          navigation,
-          footer
-        },
-        posts,
-        page
-      }
-    }
-  }
+  const posts = await client.getByType('post');
+  const page = await client.getSingle('post_index');
+
+  return {
+    props: {
+      global: {
+        navigation,
+        footer,
+      },
+      posts,
+      page,
+    },
+  };
+};
 
 export default PostsIndex;

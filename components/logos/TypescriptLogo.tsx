@@ -1,5 +1,5 @@
-import React from "react";
-import { LogoProps } from ".";
+import React from 'react';
+import { LogoProps } from '.';
 
 const TypescriptLogo: React.FC<LogoProps> = ({ width = 64, height = 64 }) => {
   return (

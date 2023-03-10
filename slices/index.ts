@@ -6,18 +6,12 @@ import NavLink from './NavLink';
 import SocialLink from './SocialLink';
 import TextSlider from './TextSlider';
 
-export {
-	FreeTextSection,
-	HeroHeader,
-	NavLink,
-	SocialLink,
-	TextSlider,
-};
+export { FreeTextSection, HeroHeader, NavLink, SocialLink, TextSlider };
 
 export const components = {
-	free_text_section: FreeTextSection,
-	hero_header: HeroHeader,
-	nav_link: NavLink,
-	social_link: SocialLink,
-	text_slider: TextSlider,
+  free_text_section: FreeTextSection,
+  hero_header: HeroHeader,
+  nav_link: NavLink,
+  social_link: SocialLink,
+  text_slider: TextSlider,
 };
