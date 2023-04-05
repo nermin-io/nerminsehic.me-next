@@ -14,8 +14,10 @@ const NAV_GAP = 20;
 
 const SlidingLine = styled('hr', {
   all: 'unset',
-  height: 2,
-  backgroundColor: 'white',
+  height: 1.5,
+  borderRadius: 4,
+  boxShadow: '0 0 20px 2px #dff962',
+  backgroundColor: '#FBFFEA',
   width: NAV_WIDTH,
   margin: 0,
   position: 'absolute',
