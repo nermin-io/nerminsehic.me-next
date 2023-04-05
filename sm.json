@@ -1,5 +1,5 @@
 {
-  "apiEndpoint": "https://nerminsehic-blog.prismic.io/api/v2",
+  "apiEndpoint": "https://nermin-dev-blog.prismic.io/api/v2",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
   "libraries": [
     "@/slices"
