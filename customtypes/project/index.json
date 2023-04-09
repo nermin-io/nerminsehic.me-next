@@ -59,6 +59,15 @@
           "placeholder": "",
           "select": null
         }
+      },
+      "is_released": {
+        "type": "Boolean",
+        "config": {
+          "label": "Released",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
       }
     }
   }

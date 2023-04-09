@@ -349,6 +349,18 @@ interface ProjectDocumentData {
      *
      */
     site: prismicT.LinkField;
+    /**
+     * Released field in *Project*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: project.is_released
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    is_released: prismicT.BooleanField;
 }
 /**
  * Project document from Prismic
