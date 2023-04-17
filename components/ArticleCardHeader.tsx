@@ -5,9 +5,10 @@ import TypescriptLogo from './logos/TypescriptLogo';
 import JavaLogo from './logos/JavaLogo';
 import ScalaLogo from './logos/ScalaLogo';
 import * as PrismicType from '@prismicio/types';
+import GoLogo from './logos/GoLogo';
 
 interface Props {
-  language: PrismicType.SelectField<'java' | 'scala' | 'typescript'>;
+  language: PrismicType.SelectField<'java' | 'scala' | 'typescript' | 'golang'>;
 }
 
 const languageVariants = {
@@ -20,12 +21,16 @@ const languageVariants = {
   scala: {
     backgroundColor: '#D4202380',
   },
+  golang: {
+    backgroundColor: '#69D7E280',
+  },
 };
 
 const logos = {
   typescript: TypescriptLogo,
   java: JavaLogo,
   scala: ScalaLogo,
+  golang: GoLogo,
 };
 
 const CardHeader = styled(Box, {
