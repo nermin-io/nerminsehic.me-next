@@ -179,7 +179,7 @@ interface PostDocumentData {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    type: prismicT.SelectField<"scala" | "java" | "typescript">;
+    type: prismicT.SelectField<"scala" | "java" | "typescript" | "golang">;
     /**
      * Title field in *Post*
      *

@@ -20,7 +20,8 @@
           "options": [
             "scala",
             "java",
-            "typescript"
+            "typescript",
+            "golang"
           ]
         }
       },
