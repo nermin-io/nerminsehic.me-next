@@ -1,4 +1,4 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import DocumentHead from '../components/layout/DocumentHead';
 import { createClient } from '../prismicio';
 import { styled } from '../stitches.config';
@@ -9,7 +9,6 @@ import ArticleList from '../components/ArticleList';
 import ArticleCard from '../components/ArticleCard';
 import Box from '../components/Box';
 import dayjs from 'dayjs';
-import SpotifyCurrentlyPlaying from '../containers/SpotifyCurrentlyPlaying';
 
 interface PageProps {
   page: Content.HomepageDocument<string>;
@@ -29,8 +28,10 @@ const Home: NextPage<PageProps> = ({ page, posts }) => {
       />
       <SliceZone slices={page.data.slices} components={components} />
       <Spacer>
-        <h5>Today I Learned</h5>
-        <p style={{ fontSize: 16 }}>A blog on software engineering topics</p>
+        <h5>Blog</h5>
+        <p style={{ fontSize: 16 }}>
+          A blog on software engineering and web development topics.
+        </p>
         <ArticleList>
           {posts.map((post) => (
             <ArticleCard post={post} key={post.id} />
