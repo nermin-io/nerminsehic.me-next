@@ -7,7 +7,7 @@ import Footer from './Footer';
 import {
   FooterDocument,
   NavigationDocument,
-} from '../../.slicemachine/prismicio';
+} from '../../prismicio-types';
 import { globalStyles } from '../../common/global';
 
 interface Props {

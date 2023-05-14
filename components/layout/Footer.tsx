@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
 import Box from '../Box';
-import { FooterDocument } from '../../.slicemachine/prismicio';
+import { FooterDocument } from '../../prismicio-types';
 import { PrismicRichText } from '@prismicio/react';
 
 interface Props {

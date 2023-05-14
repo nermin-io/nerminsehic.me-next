@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
-import { NavigationDocument } from '../../.slicemachine/prismicio';
+import { NavigationDocument } from '../../prismicio-types';
 import { SliceZone } from '@prismicio/react';
 import { components } from '../../slices';
 

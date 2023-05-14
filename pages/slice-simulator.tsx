@@ -1,7 +1,6 @@
 import { SliceSimulator } from '@prismicio/slice-simulator-react';
 import { SliceZone } from '@prismicio/react';
 import { styled } from '../stitches.config';
-import state from '../.slicemachine/libraries-state.json';
 import { components } from '../slices';
 import Box from '../components/Box';
 
@@ -15,12 +14,12 @@ const Wrapper = styled(Box, {
 const SliceSimulatorPage = () => (
   <SliceSimulator
     // The "sliceZone" prop should be a function receiving slices and rendering them using your "SliceZone" component.
+    state={{}}
     sliceZone={(props) => (
       <Wrapper>
         <SliceZone {...props} components={components} />
       </Wrapper>
     )}
-    state={state}
   />
 );
 

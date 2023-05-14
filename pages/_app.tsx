@@ -4,7 +4,7 @@ import { PrismicProvider } from '@prismicio/react';
 import { PrismicPreview } from '@prismicio/next';
 import { repositoryName } from '../prismicio';
 import Layout from '../components/layout/Layout';
-import { FooterDocument, NavigationDocument } from '../.slicemachine/prismicio';
+import { FooterDocument, NavigationDocument } from '../prismicio-types';
 import FormattedCode from '../components/FormattedCode';
 import type { JSXMapSerializer } from '@prismicio/react';
 import { QueryClient, QueryClientProvider } from 'react-query';

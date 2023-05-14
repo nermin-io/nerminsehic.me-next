@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import type { Content } from '@prismicio/client';
 import type { SliceComponentProps } from '@prismicio/react';
 import { styled } from '../../stitches.config';
-import { Simplify } from '../../.slicemachine/prismicio';
+import { Simplify } from '../../prismicio-types';
 import { useRouter } from 'next/router';
 import Box from '../../components/Box';
 import Link from 'next/link';
