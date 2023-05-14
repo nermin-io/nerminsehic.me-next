@@ -1,0 +1,72 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "managed"
+    },
+    "image": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+        "width": 12288,
+        "height": 16384
+      },
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+      "width": 12288,
+      "height": 16384,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "lift",
+      "type": "Text"
+    },
+    "snippet": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Culpa ullamco incididunt amet ea quis aliquip in nulla amet anim eu commodo do deserunt. Cillum do sit eiusmod sunt fugiat sint exercitation ad eu ipsum."
+          }
+        }
+      ]
+    },
+    "published_at": {
+      "__TYPE__": "FieldContent",
+      "type": "Timestamp",
+      "value": "2012-03-02T11:03:14Z"
+    },
+    "body": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Esse culpa nostrud ea consequat qui est eiusmod aliquip."
+          }
+        }
+      ]
+    },
+    "site": {
+      "__TYPE__": "LinkContent",
+      "value": {
+        "__TYPE__": "ExternalLink",
+        "url": "http://google.com"
+      }
+    },
+    "is_released": {
+      "__TYPE__": "BooleanContent",
+      "value": false
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "apiEndpoint": "https://nermin-dev-blog.prismic.io/api/v2",
+  "repositoryName": "nermin-dev-blog",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"],
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+}

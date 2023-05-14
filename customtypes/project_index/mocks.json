@@ -1,0 +1,19 @@
+[
+  {
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "parts",
+      "type": "Text"
+    },
+    "document_title": {
+      "__TYPE__": "FieldContent",
+      "value": "each",
+      "type": "Text"
+    },
+    "document_description": {
+      "__TYPE__": "FieldContent",
+      "value": "bark",
+      "type": "Text"
+    }
+  }
+]

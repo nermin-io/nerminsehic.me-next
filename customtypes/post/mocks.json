@@ -1,0 +1,45 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "step"
+    },
+    "type": {
+      "__TYPE__": "FieldContent",
+      "value": "typescript",
+      "type": "Select"
+    },
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "something",
+      "type": "Text"
+    },
+    "snippet": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Exercitation eiusmod incididunt commodo sint eiusmod tempor deserunt sint."
+          }
+        }
+      ]
+    },
+    "published_at": {
+      "__TYPE__": "FieldContent",
+      "type": "Date",
+      "value": "2015-05-25"
+    },
+    "body": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Lorem tempor excepteur sunt excepteur amet sit. Lorem minim Lorem excepteur quis occaecat. Officia et eu occaecat ut amet quis id pariatur nostrud qui ad duis culpa."
+          }
+        }
+      ]
+    }
+  }
+]

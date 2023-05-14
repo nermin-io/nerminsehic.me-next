@@ -1,0 +1,26 @@
+[
+  {
+    "title": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Ipsum nulla nisi dolore qui nulla non ex quis magna quis anim enim nisi. In velit eiusmod anim tempor. Et consectetur ut qui mollit nulla et ea sit cillum reprehenderit id."
+          }
+        }
+      ]
+    },
+    "copyright": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Sit et in non deserunt est amet aute in irure aliquip et laboris dolore incididunt eiusmod. In anim nisi reprehenderit reprehenderit nulla ut ullamco pariatur reprehenderit. Labore labore ullamco reprehenderit."
+          }
+        }
+      ]
+    }
+  }
+]

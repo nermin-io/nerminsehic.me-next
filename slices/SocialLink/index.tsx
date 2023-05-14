@@ -7,6 +7,7 @@ import LinkedinIcon from '../../components/icons/LinkedinIcon';
 import TwitterIcon from '../../components/icons/TwitterIcon';
 import Box from '../../components/Box';
 import { PrismicLink } from '@prismicio/react';
+import BmcIcon from '../../components/icons/BmcIcon';
 
 export type SocialLinkProps = SliceComponentProps<Content.SocialLinkSlice>;
 
@@ -19,6 +20,7 @@ const iconTypes = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
   twitter: TwitterIcon,
+  bmc: BmcIcon,
 };
 
 const SocialLink: React.FC<SocialLinkProps> = ({ slice }) => {

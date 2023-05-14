@@ -1,8 +1,4 @@
 {
-  "apiEndpoint": "https://nermin-dev-blog.prismic.io/api/v2",
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
-  "libraries": [
-    "@/slices"
-  ],
-  "_latest": "0.5.1"
+	"//": "sm.json is deprecated, if you were importing values from this file please now import them from slicemachine.config.json, else you can safely delete this file",
+	"apiEndpoint": "https://nermin-dev-blog.prismic.io/api/v2"
 }

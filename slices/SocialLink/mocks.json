@@ -1,32 +1,32 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {},
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "type",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "twitter",
-              "type": "Select"
-            }
-          ],
-          [
-            "path",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "http://twitter.com"
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"type",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "twitter",
+							"type": "Select"
+						}
+					],
+					[
+						"path",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
 ]
